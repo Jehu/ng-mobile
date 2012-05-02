@@ -9,6 +9,7 @@ It is based on
   * [iScroll4](http://cubiq.org/iscroll-4)
   * [SASS](http://sass-lang.com/)
   * [Compass](http://compass-style.org/)
+  * [html5boilerplate (mobile)](http://html5boilerplate.com/mobile)
 
 All honor and thanks goes to the skilled people working on that great mentioned open source projects.
 
