@@ -15,6 +15,19 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
 .factory('ngMobileHttpInterceptor', function ($q, $window) {
     return function (promise) {
         var container = $('#content');
+        var refreshNavigation = function() {
+            // set menulink in footer active
+            $('footer, #footer').find('li > a').each(function(index, val) { 
+                var regExp = /(\/?#?\/?)/;
+                if($(val).attr('href').replace(regExp,'') === location.hash.replace(regExp,"")) {
+                    $(val).addClass('active');
+                }
+                else {
+                    $(val).removeClass('active');
+                }
+            });
+        };
+
         return promise.then(function (response) {
             // only if loaded partial is an controller do some things...
             if($(response.data).attr('ng-controller')) {
@@ -35,12 +48,18 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
                     $('footer').show();
                 }
 
+                // refresh Navifgation
+                setTimeout(function() {
+                    refreshNavigation()
+                },300);
+
                 // initialize iScroll if needed
                 if($(response.data).find('div#scroller').length) {
                     setTimeout(function() {
                         $window.ngMobileScroll = new iScroll('wrapper', { 
                             hScrollbar: false, 
-                            vScrollbar: false,
+                            vScrollbar: true,
+                            momentum: false,
                             onBeforeScrollStart: function (e) {
                                 var target = e.target;
                                 while (target.nodeType != 1) target = target.parentNode;
@@ -49,32 +68,25 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
                                 }
                             }
                         });
-                    },300);
+                        container.css('visibility','visible')
+                    },600);
                 }
+
+                // stop transition
+                setTimeout(function() {
+                    //container.fadeIn(200);
+                    container.show(200);
+                },300)
+            }
+            else {
+                container.show();
             }
 
-            // stop transition
-            container.show();
-
-            setTimeout(function() {
-                // set menulink in footer active
-                $('footer, #footer').find('li > a').removeClass('active');
-                $('footer, #footer').find('li > a').each(function(index, val) { 
-                    var regExp = /(\/?#\/?)/;
-                    //console.log($(val).attr('href').replace(regExp,''), location.hash.replace(regExp,''));
-                    if($(val).attr('href').replace(regExp,'') === location.hash.replace(regExp,"")) {
-                        $(val).addClass('active');
-                    }
-                    else {
-                        $(val).removeClass('active');
-                    }
-                });
-            },0);
 
             return response;
         }, function (response) {
             // stop transition
-            container.fadeIn();
+            //container.show();
             return $q.reject(response);
         });
     };
@@ -88,6 +100,7 @@ var ngMobile = angular.module('ngMobile', ['SharedServices']).config(function($r
     $routeProvider.when('/start', { template: 'partials/default.html', controller: DefaultCntl });
     $routeProvider.when('/demo', { template: 'partials/demo.html', controller: DemoCntl });
     $routeProvider.when('/form', { template: 'partials/form.html', controller: FormCntl });
+    $routeProvider.when('/list', { template: 'partials/list.html', controller: ListCntl });
     $routeProvider.otherwise({ template: 'partials/default.html', controller: DefaultCntl });
 
     $locationProvider.html5Mode(false).hashPrefix('');
@@ -115,34 +128,48 @@ function MainCntl($scope, $location) {
     $scope.footer= 'partials/default_footer.html';
 
 
-    /*
     // This is code from iui to catch link clicks...
-    this.findParent  = function(node, localName)
-    {
+    /*
+    this.findParent  = function(node, localName) {
         while (node && (node.nodeType != 1 || node.localName.toLowerCase() != localName)) {
             node = node.parentNode;
         }
         return node;
     }
 
-    addEventListener("click", function(event)
+    addEventListener("click mousedown mouseup", function(event)
     {
+        if(event.type == 'click') {
+            console.log('click');
+        }
+        if(event.type == 'mousedown') {
+            console.log('mousedown');
+            return;
+        }
+        if(event.type == 'mouseup') {
+            console.log('mouseup');
+            return;
+        }
         var link = that.findParent(event.target, "a");
         if (link)
         {
-            function unselect() { link.removeAttribute("selected"); }
-            if (link.href && link.hash && link.hash != "#" && !link.target)
-            {
-                console.log('haha!');
-                console.log(link.hash, link.hash.replace('#','/'));
-                var newLink = link.hash.replace('#','/');
-                // FIXME the $location.path() to not work! WHY???
-                $location.path(newLink);//.replace();
-                //followAnchor(link);
-            }
-            else {
-                return;
-            }
+            //function unselect() { link.removeAttribute("selected"); }
+            //if (link.href && link.hash && link.hash != "#" && !link.target)
+            //{
+            //    console.log('haha!');
+            //    console.log(link.hash, link.hash.replace('#','/'));
+            //    var newLink = link.hash.replace('#','/');
+            //    // manually update path
+            //    $scope.apply($location.path(newLink));
+            //    setTimeout(function() {
+            //        //$scope.$parent.$digest();
+            //    },300);
+            //    // re-evaluate whole application
+            //    
+            //}
+            //else {
+            //    return;
+            //}
             
             event.preventDefault();		   
         }
@@ -164,13 +191,33 @@ function DefaultCntl($scope, $location) {
     $scope.$parent.txtHeader = 'Start';
     $scope.$parent.header = 'partials/default_header.html';
     $scope.$parent.footer= 'partials/default_footer.html';
-    $location.path('/demo');
 }
 
 function DemoCntl($scope) {
-    $scope.txtHeader = 'Dies ist ein Test';
+    $scope.txtHeader = 'Custom Header';
 }
 
 function FormCntl($scope) {
     $scope.$parent.txtHeader = 'Form Demo';
+}
+
+function ListCntl($scope) {
+    //$scope.$parent.txtHeader = 'List Demo';
+    $scope.txtHeader = 'A List Demo';
+    $scope.listData = [{
+        'title':'Title #1'
+        ,'text':'This ist the Text #1'
+    },{
+        'title':'Title #2'
+        ,'text':'This ist the Text #2'
+    },{
+        'title':'Title #3'
+        ,'text':'This ist the Text #3'
+    },{
+        'title':'Title #4'
+        ,'text':'This ist the Text #4'
+    },{
+        'title':'Title #5'
+        ,'text':'This ist the Text #5'
+    }];
 }
