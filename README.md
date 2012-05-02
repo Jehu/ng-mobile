@@ -1,3 +1,5 @@
+# ng-mobile
+
 This project should be a starting point for my mobile websites or mobile applications (e.g. with phonegap).
 
 It is based on
@@ -9,6 +11,10 @@ It is based on
   * [Compass](http://compass-style.org/)
 
 All honor and thanks goes to the skilled people working on that great mentioned open source projects.
+
+## Requirements
+
+Please download iscroll4 and extract it to ./lib/iscroll4
 
 ## TODO
 
