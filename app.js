@@ -85,16 +85,12 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
  */
 var ngMobile = angular.module('ngMobile', ['SharedServices']).config(function($routeProvider, $locationProvider) {
     // configure your routes to load the partials / views
-    $routeProvider.when('', { template: 'partials/default.html', controller: DefaultCntl });
-    $routeProvider.when('/', { template: 'partials/default.html', controller: DefaultCntl });
     $routeProvider.when('/start', { template: 'partials/default.html', controller: DefaultCntl });
     $routeProvider.when('/demo', { template: 'partials/demo.html', controller: DemoCntl });
     $routeProvider.when('/form', { template: 'partials/form.html', controller: FormCntl });
-    //$routeProvider.otherwise({redirectTo: '/'});
     $routeProvider.otherwise({ template: 'partials/default.html', controller: DefaultCntl });
 
-    $locationProvider.html5Mode(true);
-    //$locationProvider.hashPrefix('');
+    $locationProvider.html5Mode(false).hashPrefix('');
 });
 
 /**
@@ -111,10 +107,47 @@ ngMobile.directive('ngmRemovePreloader', function () {
 /**
  * Main Controller, shares his scope with all other controllers
  */
-function MainCntl($scope,$location) {
+function MainCntl($scope, $location) {
+    that = this;
+
     $scope.txtHeader = 'Default Header';
     $scope.header = 'partials/default_header.html';
     $scope.footer= 'partials/default_footer.html';
+
+
+    /*
+    // This is code from iui to catch link clicks...
+    this.findParent  = function(node, localName)
+    {
+        while (node && (node.nodeType != 1 || node.localName.toLowerCase() != localName)) {
+            node = node.parentNode;
+        }
+        return node;
+    }
+
+    addEventListener("click", function(event)
+    {
+        var link = that.findParent(event.target, "a");
+        if (link)
+        {
+            function unselect() { link.removeAttribute("selected"); }
+            if (link.href && link.hash && link.hash != "#" && !link.target)
+            {
+                console.log('haha!');
+                console.log(link.hash, link.hash.replace('#','/'));
+                var newLink = link.hash.replace('#','/');
+                // FIXME the $location.path() to not work! WHY???
+                $location.path(newLink);//.replace();
+                //followAnchor(link);
+            }
+            else {
+                return;
+            }
+            
+            event.preventDefault();		   
+        }
+    }, true);
+    */
 
     // set active tab in footer
     //$scope.$on('$afterRouteChange', function() {
@@ -126,11 +159,12 @@ function MainCntl($scope,$location) {
 /**
  * Default Controller for the start page
  */
-function DefaultCntl($scope) {
+function DefaultCntl($scope, $location) {
     // Set partials for Header and Footer in MainCntl
     $scope.$parent.txtHeader = 'Start';
     $scope.$parent.header = 'partials/default_header.html';
     $scope.$parent.footer= 'partials/default_footer.html';
+    $location.path('/demo');
 }
 
 function DemoCntl($scope) {
