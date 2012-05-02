@@ -75,7 +75,7 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
                 // stop transition
                 setTimeout(function() {
                     //container.fadeIn(200);
-                    container.show(200);
+                    container.show();
                 },300)
             }
             else {
@@ -86,7 +86,7 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
             return response;
         }, function (response) {
             // stop transition
-            //container.show();
+            container.show();
             return $q.reject(response);
         });
     };
@@ -121,66 +121,9 @@ ngMobile.directive('ngmRemovePreloader', function () {
  * Main Controller, shares his scope with all other controllers
  */
 function MainCntl($scope, $location) {
-    that = this;
-
     $scope.txtHeader = 'Default Header';
     $scope.header = 'partials/default_header.html';
     $scope.footer= 'partials/default_footer.html';
-
-
-    // This is code from iui to catch link clicks...
-    /*
-    this.findParent  = function(node, localName) {
-        while (node && (node.nodeType != 1 || node.localName.toLowerCase() != localName)) {
-            node = node.parentNode;
-        }
-        return node;
-    }
-
-    addEventListener("click mousedown mouseup", function(event)
-    {
-        if(event.type == 'click') {
-            console.log('click');
-        }
-        if(event.type == 'mousedown') {
-            console.log('mousedown');
-            return;
-        }
-        if(event.type == 'mouseup') {
-            console.log('mouseup');
-            return;
-        }
-        var link = that.findParent(event.target, "a");
-        if (link)
-        {
-            //function unselect() { link.removeAttribute("selected"); }
-            //if (link.href && link.hash && link.hash != "#" && !link.target)
-            //{
-            //    console.log('haha!');
-            //    console.log(link.hash, link.hash.replace('#','/'));
-            //    var newLink = link.hash.replace('#','/');
-            //    // manually update path
-            //    $scope.apply($location.path(newLink));
-            //    setTimeout(function() {
-            //        //$scope.$parent.$digest();
-            //    },300);
-            //    // re-evaluate whole application
-            //    
-            //}
-            //else {
-            //    return;
-            //}
-            
-            event.preventDefault();		   
-        }
-    }, true);
-    */
-
-    // set active tab in footer
-    //$scope.$on('$afterRouteChange', function() {
-    //});
-    //$scope.$on('$beforeRouteChange', function() {
-    //});
 }
 
 /**
@@ -202,7 +145,6 @@ function FormCntl($scope) {
 }
 
 function ListCntl($scope) {
-    //$scope.$parent.txtHeader = 'List Demo';
     $scope.txtHeader = 'A List Demo';
     $scope.listData = [{
         'title':'Title #1'
