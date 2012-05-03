@@ -1,8 +1,12 @@
+$default-text-color: #222
+$lighter-text-color: #888
+$default-view-bg-color: #D2D2D2
 $default-text-shadow-color: rgba(#B5B5B5, 0.6)
 $default-text-shadow-blur: 3px
 $default-text-shadow-v-offset: 1px
 
 @import "boilerplate.css"
+@import "icons.css"
 @import "compass/css3"
 
 #loader
@@ -27,11 +31,11 @@ body, ul, li
   border: 0
 
 body
-  font-size: 12px
+  font-size: 14px
   -webkit-user-select: none
   -webkit-text-size-adjust: none
   font-family: helvetica
-  background-color: #AAA
+  background-color: $default-view-bg-color
 
 header, #header
   position: absolute
@@ -42,10 +46,10 @@ header, #header
   height: 45px
   line-height: 45px
   background-color: #d51875
-  @include background-image(linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e))
+  /*@include background-image(linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e))
+  @include background-image(linear-gradient(top, #47636D, #84A7B4 5%, #238DB3))
   padding: 0
   color: #eee
-  font-size: 20px
   text-align: center
 
 header a, #header a
@@ -83,7 +87,7 @@ footer, #footer
   bottom: 48px
   left: 0
   width: 100%
-  background: #aaa
+  background: $default-view-bg-color
   overflow: auto
   label, input
     z-index: 999
@@ -114,18 +118,26 @@ footer > ul > li, #footer > ul > li
   /*float: left;
   display: inline-block
   overflow: hidden
+  line-height: 100%
 
 footer > ul > li > a, #footer > ul > li > a
   display: block
   width: 40px
-  height: 20px
-  padding-top: 25px
+  height: 43px
+  padding-top: 5px 
   text-align: center
   text-decoration: none !important
   color: #fff !important
 
-footer > ul > li > a.active, #footer > ul > li > a.active, footer > ul > li > a:active, #footer > ul > li > a:active, footer > ul > li > a:hover, #footer > ul > li > a:hover
+footer > ul > li > a.active, #footer > ul > li > a.active
   @include background-image(linear-gradient(top, #666666, #999999 2%, #222222))
+
+/*footer > ul > li > a:active, #footer > ul > li > a:active, footer > ul > li > a:hover, #footer > ul > li > a:hover
+
+.inner-wrap
+  padding: 0 10px
+
+
 
 /* listview
 
@@ -140,12 +152,15 @@ ul.listview li
   h2
     font-size: 18px
     font-weight: bold
+    margin: 8px 0 4px 0
+  p
+    margin: 4px 0 8px 0
   > a
     position: relative
     display: block
     font-size: 14px
     font-weight: normal 
-    color: #888
+    color: $default-text-color
     text-decoration: none
     padding-right: 30px
     &:after
@@ -155,7 +170,7 @@ ul.listview li
       font-weight: bold
       font-size: 18px
       right: 15px
-      color: #888
+      color: $default-text-color
 
 /* forms begin =>
 
@@ -195,14 +210,14 @@ input:focus, textarea:focus
 
 form 
   fieldset
-    border: 1px solid #888
+    border: 1px solid $lighter-text-color
     @include border-radius(5px)
     padding: 10px
     margin: 5px
     background-color: #EAEAEA
   legend
     font-weight: bold
-    font-size: 14px
+    font-size: 16px
     text-transform: uppercase
     @include single-text-shadow
   .row
@@ -230,15 +245,15 @@ form
       border: 1px solid #dedede
       @include border-radius(5px)
       background-color: #fff
-      padding: 5px
+      padding: 10px
       > input[type=radio],
       > input[type=checkbox]
         position: absolute
-        top: 5px
+        top: 10px
     .help
       width: 180px
       font-size: 12px
-      color: #888
+      color: $lighter-text-color
       margin: 0
   .row.group
     > label
@@ -266,7 +281,7 @@ a.btn, button, input[type=submit]
   display: inline-block
   color: #000
   font-family: arial
-  font-size: 15px
+  font-size: 14px
   font-weight: bold
   padding: 6px 24px
   text-decoration: none
@@ -276,3 +291,20 @@ a.btn, button, input[type=submit]
     top: 1px
 
 /* <= forms end
+
+
+header a.btn.back,
+#header a.btn.back
+  position: absolute
+  line-height: 100%
+  left: 10px
+  top: 10px
+  white-space: nowrap
+  width: auto
+  /*width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+  max-width: 70px
+  padding: 6px 10px
+
+

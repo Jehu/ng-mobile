@@ -6,7 +6,8 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
     $httpProvider.responseInterceptors.push('ngMobileHttpInterceptor');
     var spinnerFunction = function (data, headersGetter) {
         // start transition
-        $('#content').hide();
+        $('#loader').show();
+
         return data;
     };
     $httpProvider.defaults.transformRequest.push(spinnerFunction);
@@ -14,7 +15,13 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
 // register the interceptor as a service, intercepts ALL angular ajax http calls
 .factory('ngMobileHttpInterceptor', function ($q, $window) {
     return function (promise) {
-        var container = $('#content');
+        // remove loading animation after partial was loaded
+        var removeLoader = function() {
+            setTimeout(function() {
+                $('#loader').fadeOut();
+            },100);
+        }
+
         var refreshNavigation = function() {
             // set menulink in footer active
             $('footer, #footer').find('li > a').each(function(index, val) { 
@@ -51,7 +58,7 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
                 // refresh Navifgation
                 setTimeout(function() {
                     refreshNavigation()
-                },300);
+                },10);
 
                 // initialize iScroll if needed
                 if($(response.data).find('div#scroller').length) {
@@ -68,25 +75,23 @@ angular.module('SharedServices', []).config(function ($httpProvider) {
                                 }
                             }
                         });
-                        container.css('visibility','visible')
-                    },600);
+                    },300);
                 }
 
                 // stop transition
-                setTimeout(function() {
-                    //container.fadeIn(200);
-                    container.show();
-                },300)
+                removeLoader();
             }
             else {
-                container.show();
+                // stop transition
+                removeLoader();
             }
 
 
             return response;
         }, function (response) {
             // stop transition
-            container.show();
+            removeLoader();
+
             return $q.reject(response);
         });
     };
@@ -121,9 +126,43 @@ ngMobile.directive('ngmRemovePreloader', function () {
  * Main Controller, shares his scope with all other controllers
  */
 function MainCntl($scope, $location) {
-    $scope.txtHeader = 'Default Header';
+    // default header Text
+    $scope.txtHeader = undefined 
+
+    // default footer and header partials
     $scope.header = 'partials/default_header.html';
-    $scope.footer= 'partials/default_footer.html';
+    $scope.footer = 'partials/default_footer.html';
+
+    // setter to load another partial for regions (header or footer)
+    $scope.setPartial = function(region, filename) {
+        $scope[region] = filename;
+    }
+
+    // setter for header text
+    $scope.setHeaderText = function(string) {
+        $scope.txtHeader = string;
+    }
+
+    // make history back possible
+    $scope.previousPage = {
+        txtHeader: ''
+        ,hash: ''
+        ,path: ''
+    }
+
+    $scope.$on('$beforeRouteChange', function() {
+        $scope.previousPage.txtHeader = $scope.txtHeader;
+        $scope.previousPage.hash = $scope.previousPage.path.replace(/\/?#?\/?/,'#');
+    });
+
+    $scope.$on('$afterRouteChange', function() {
+        $scope.previousPage.path = _.clone($location.path());
+    });
+
+    // do a history back
+    $scope.historyBack = function() {
+        $location.path($scope.previousPage.path);
+    }
 }
 
 /**
@@ -131,21 +170,23 @@ function MainCntl($scope, $location) {
  */
 function DefaultCntl($scope, $location) {
     // Set partials for Header and Footer in MainCntl
-    $scope.$parent.txtHeader = 'Start';
-    $scope.$parent.header = 'partials/default_header.html';
-    $scope.$parent.footer= 'partials/default_footer.html';
+    $scope.setHeaderText('Start');
+
+    $scope.setPartial('header', 'partials/default_header.html');
+    $scope.setPartial('footer', 'partials/default_footer.html');
 }
 
 function DemoCntl($scope) {
-    $scope.txtHeader = 'Custom Header';
+    $scope.setHeaderText('Custom Header with back-btn');
 }
 
 function FormCntl($scope) {
-    $scope.$parent.txtHeader = 'Form Demo';
+    $scope.setHeaderText('Form Demo');
 }
 
 function ListCntl($scope) {
-    $scope.txtHeader = 'A List Demo';
+    $scope.setHeaderText('A List Demo');
+
     $scope.listData = [{
         'title':'Title #1'
         ,'text':'This ist the Text #1'
