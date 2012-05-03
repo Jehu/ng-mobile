@@ -3,3 +3,5 @@ config.xml*
 .sass-cache/
 /lib/iscroll/*
 /lib/iscroll4/*
+/gh-pages
+/app.js
