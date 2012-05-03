@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "IcoMoon";
+  src: url("icons.ttf") format("truetype"), url("icons.svg#") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 9, ../sass/icons.sass */
+.icon:before {
+  color: inherit;
+  font-weight: normal !important;
+  font-family: "IcoMoon";
+  padding: 5px;
+  float: left;
+  font-size: 28px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: auto;
+}
+/* line 19, ../sass/icons.sass */
+.icon.mini:before {
+  font-size: 20px !important;
+  height: 16px !important;
+  width: 16px !important;
+  line-height: 16px !important;
+}
+/* line 24, ../sass/icons.sass */
+.icon.big:before {
+  font-size: 40px !important;
+  height: 32px !important;
+  width: 32px !important;
+  line-height: 32px !important;
+}
+
+/* line 30, ../sass/icons.sass */
+footer .icon, #footer .icon {
+  font-size: 12px;
+}
+
+/* line 33, ../sass/icons.sass */
+footer .icon:before, #footer .icon:before {
+  clear: both;
+  float: none;
+  display: block;
+}
+
+/* line 39, ../sass/icons.sass */
+.icon.home:before {
+  content: "!";
+}
+/* line 41, ../sass/icons.sass */
+.icon.pencil:before {
+  content: "\22";
+}
+/* line 43, ../sass/icons.sass */
+.icon.picture:before {
+  content: "#";
+}
+/* line 45, ../sass/icons.sass */
+.icon.camera:before {
+  content: "$";
+}
+/* line 47, ../sass/icons.sass */
+.icon.headset:before {
+  content: "%";
+}
+/* line 49, ../sass/icons.sass */
+.icon.paper:before {
+  content: "&";
+}
+/* line 51, ../sass/icons.sass */
+.icon.stack:before {
+  content: "\27";
+}
+/* line 53, ../sass/icons.sass */
+.icon.folder:before {
+  content: "(";
+}
+/* line 55, ../sass/icons.sass */
+.icon.tag:before {
+  content: ")";
+}
+/* line 57, ../sass/icons.sass */
+.icon.basket:before {
+  content: "*";
+}
+/* line 59, ../sass/icons.sass */
+.icon.phone:before {
+  content: "+";
+}
+/* line 61, ../sass/icons.sass */
+.icon.mail:before {
+  content: ",";
+}
+/* line 63, ../sass/icons.sass */
+.icon.location:before {
+  content: "-";
+}
+/* line 65, ../sass/icons.sass */
+.icon.clock:before {
+  content: ".";
+}
+/* line 67, ../sass/icons.sass */
+.icon.calendar:before {
+  content: "/";
+}
+/* line 69, ../sass/icons.sass */
+.icon.message:before {
+  content: "0";
+}
+/* line 71, ../sass/icons.sass */
+.icon.chat:before {
+  content: "1";
+}
+/* line 73, ../sass/icons.sass */
+.icon.user:before {
+  content: "2";
+}
+/* line 75, ../sass/icons.sass */
+.icon.loading:before {
+  content: "3";
+}
+/* line 77, ../sass/icons.sass */
+.icon.refresh:before {
+  content: "4";
+}
+/* line 79, ../sass/icons.sass */
+.icon.magnifier:before {
+  content: "5";
+}
+/* line 81, ../sass/icons.sass */
+.icon.key:before {
+  content: "6";
+}
+/* line 83, ../sass/icons.sass */
+.icon.settings:before {
+  content: "7";
+}
+/* line 85, ../sass/icons.sass */
+.icon.graph:before {
+  content: "8";
+}
+/* line 87, ../sass/icons.sass */
+.icon.trash:before {
+  content: "9";
+}
+/* line 89, ../sass/icons.sass */
+.icon.pin:before {
+  content: ":";
+}
+/* line 91, ../sass/icons.sass */
+.icon.target:before {
+  content: ";";
+}
+/* line 93, ../sass/icons.sass */
+.icon.download:before {
+  content: "<";
+}
+/* line 95, ../sass/icons.sass */
+.icon.upload:before {
+  content: "=";
+}
+/* line 97, ../sass/icons.sass */
+.icon.star:before {
+  content: ">";
+}
+/* line 99, ../sass/icons.sass */
+.icon.heart:before {
+  content: "?";
+}
+/* line 101, ../sass/icons.sass */
+.icon.warning:before {
+  content: "@";
+}
+/* line 103, ../sass/icons.sass */
+.icon.add:before {
+  content: "A";
+}
+/* line 105, ../sass/icons.sass */
+.icon.remove:before {
+  content: "B";
+}
+/* line 107, ../sass/icons.sass */
+.icon.question:before {
+  content: "C";
+}
+/* line 109, ../sass/icons.sass */
+.icon.info:before {
+  content: "D";
+}
+/* line 111, ../sass/icons.sass */
+.icon.error:before {
+  content: "E";
+}
+/* line 113, ../sass/icons.sass */
+.icon.check:before {
+  content: "F";
+}
+/* line 115, ../sass/icons.sass */
+.icon.minimize:before {
+  content: "G";
+}
+/* line 117, ../sass/icons.sass */
+.icon.close:before {
+  content: "H";
+}
+/* line 119, ../sass/icons.sass */
+.icon.up:before {
+  content: "I";
+}
+/* line 121, ../sass/icons.sass */
+.icon.down:before {
+  content: "J";
+}
+/* line 123, ../sass/icons.sass */
+.icon.left:before {
+  content: "K";
+}
+/* line 125, ../sass/icons.sass */
+.icon.right:before {
+  content: "L";
+}
+/* line 127, ../sass/icons.sass */
+.icon.tools:before {
+  content: "M";
+}
+/* line 129, ../sass/icons.sass */
+.icon.html5:before {
+  content: "N";
+}
+/* line 131, ../sass/icons.sass */
+.icon.css:before {
+  content: "O";
+}
+/* line 133, ../sass/icons.sass */
+.icon.js:before {
+  content: "P";
+}
+/* line 135, ../sass/icons.sass */
+.icon.cloud:before {
+  content: "Q";
+}
+/* line 137, ../sass/icons.sass */
+.icon.tv:before {
+  content: "R";
+}
+/* line 139, ../sass/icons.sass */
+.icon.wifi:before {
+  content: "S";
+}
+/* line 141, ../sass/icons.sass */
+.icon.new:before {
+  content: "T";
+}
+/* line 143, ../sass/icons.sass */
+.icon.mic:before {
+  content: "U";
+}
+/* line 145, ../sass/icons.sass */
+.icon.database:before {
+  content: "V";
+}
+/* line 147, ../sass/icons.sass */
+.icon.busy:before {
+  content: "W";
+}
+/* line 149, ../sass/icons.sass */
+.icon.bug:before {
+  content: "X";
+}
+/* line 151, ../sass/icons.sass */
+.icon.lamp:before {
+  content: "Y";
+}
