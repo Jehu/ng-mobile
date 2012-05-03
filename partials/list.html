@@ -1,0 +1,17 @@
+<div ng-controller="ListCntl">
+    <div id="header">
+        <h1>{{txtHeader}}</h1>
+    </div>
+    <div id="wrapper">
+        <div id="scroller">
+            <ul class="listview">
+                <li ng-repeat="item in listData">
+                    <a href="#">
+                        <h2 ng-bind="item.title"></h2>
+                        <p ng-bind="item.text"></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
