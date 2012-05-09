@@ -17,7 +17,7 @@ a {
   color: black;
 }
 /* line 24, ../sass/ng-mobile.sass */
-a:link, a:hover, a:active {
+a:link, a:hover, a:active, a:visited {
   text-decoration: none;
   color: black;
 }

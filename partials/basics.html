@@ -1,0 +1,46 @@
+<div id="wrapper" ng-controller="BasicsCntl">
+    <div id="scroller">
+        <div class="inner-wrap">
+            <section>
+                <h2>How to start</h2>
+                <p>It's really easy to start, if you are an webdeveloper with some experience. Let's go!</p>
+                <ul>
+                    <li>You should have run a ready to start webserver (apache or so) with an working vhost for your project</li>
+                    <li>Go to <a href="https://github.com/Jehu/ng-mobile/downloads">https://github.com/Jehu/ng-mobile/downloads</a> and hit one of the download buttons.</li>
+                    <li>Unpack the downloaded archive to your vhost httpdocs directory</li>
+                    <li>Point your browser to the project.</li>
+                </ul>
+                <p>Congrats! You see your ng-mobile boilerplate.</p>
+            </section>
+            <section>
+                <h2>First: Read</h2>
+                <p>ng-mobile is a collection of widespread technologies and tools - nothing more. It's possible, you know the most of them already. If not, now it's time to learn some new exciting things...</p>
+                <ul>
+                    <li><a href="http://www.angularjs.org">Angular.js</a> (it's a must to know this)</li>
+                    <li><a href="http://sass-lang.com/">SASS</a> (enhance the work with CSS, highly recommended)</li>
+                    <li><a href="http://compass-style.org/">Compass</a> (uses SASS and make it even better. highly recommended)</li>
+                    <li><a href="http://jquery.com/">jQuery</a> (you know it already, i hope)</li>
+                    <li><a href="http://cubiq.org/iscroll-4">iScroll4</a> (is uses by default in ng-mobile, you should know that it exists)</li>
+                    <li><a href="http://html5boilerplate.com/mobile">html5boilerplate (mobile)</a> (is uses by default in ng-mobile, you should know that it exists)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Second: Write</h2>
+                <p>Now you are ready to write your own mobile website or application.</p>
+                <p>Rename "app.dist.js" to "app.js" and change the index.html to load the new "app.js"</p>
+                <h3>app.js</h3>
+                <p>As you can see, there is a ngMobile.config() at the beginning. This is the point where you wire URL, Controller and the view together (Routing). Change this section to your needs.</p>
+
+                <p>There are some example controllers in app.js. You can rename them for your needs. But please think of write a routing rule for it also.</p>
+                <h3>Partials</h3>
+                <p>In the /partials directory you find some views. This is the place where you add all templates for your mobile pages. Again in the routing section (app.js) you have to use the right filenames.</p>
+                <p>The views "default_footer.html" and "default_header.html" are loaded from the MainCntl and are used for all views by default. You can overload other header/footers in your controllers or include a div container with id "header" and/or "footer" in your views to use them only in this particular view.</p>
+                <p>In some cases it may be necessary to load a new global header and/or footer. You can do this by use the setPartial() method in your controller:</p>
+                <pre><code>$scope.setPartial('header', 'partials/other_header.html');
+$scope.setPartial('footer', 'partials/other_footer.html');</code></pre> 
+                <p>In most cases it will be a good idea to use default_header.html and default_footer.html and change them for your needs.
+                </p>
+            </section>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+/* line 1, ../sass/custom.sass */
+#scroller section ul,
+section ul {
+  list-style-type: disc;
+}
+/* line 4, ../sass/custom.sass */
+#scroller section ul li,
+section ul li {
+  margin-left: 25px;
+}
+
+/* line 7, ../sass/custom.sass */
+a:link, a:hover, a:active, a:visited, a {
+  color: #0b0039;
+  text-decoration: none;
+}
+
+/* line 11, ../sass/custom.sass */
+section a:hover {
+  text-decoration: underline;
+}
+
+/* line 14, ../sass/custom.sass */
+p, #wrapper section ul, section ul, form {
+  margin: 10px 0;
+}

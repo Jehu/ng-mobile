@@ -7,11 +7,19 @@ ngMobile.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/demo', { template: 'partials/demo.html', controller: DemoCntl });
     $routeProvider.when('/form', { template: 'partials/form.html', controller: FormCntl });
     $routeProvider.when('/list', { template: 'partials/list.html', controller: ListCntl });
-    $routeProvider.otherwise({ template: 'partials/default.html', controller: StartCntl });
+
+    $routeProvider.when('/basics', { template: 'partials/basics.html', controller: BasicsCntl });
+
+    $routeProvider.otherwise({ template: 'partials/start.html', controller: StartCntl });
 
     // this must be to get it work! dont't change if you don't know exactly what you do...
     $locationProvider.html5Mode(false).hashPrefix('');
 });
+
+ngMobile.directive('ngmBackButton', function() {
+
+});
+
 
 /**
  * Startpage Controller
@@ -24,7 +32,7 @@ function StartCntl($scope, $location) {
     // but this way, you can set them to another file
     /*
     $scope.setPartial('header', 'partials/default_header.html');
-    $scope.setPartial('footer', 'partials/default_footer.html');
+    $scope.setPartial('footer', 'partials/other_footer.html');
     */
 }
 
@@ -64,4 +72,10 @@ function ListCntl($scope) {
         'title':'Title #5'
         ,'text':'This ist the Text #5'
     }];
+}
+
+function BasicsCntl($scope) {
+    var s = $scope;
+
+    s.setHeaderText('Basics');
 }
