@@ -6,16 +6,12 @@ It is based on
 
   * [Angular.js](http://www.angularjs.org)
   * [jQuery](http://jquery.com/)
-  * [iScroll4](http://cubiq.org/iscroll-4)
+  * [jScrollPane](http://jscrollpane.kelvinluck.com)
   * [SASS](http://sass-lang.com/)
   * [Compass](http://compass-style.org/)
   * [html5boilerplate (mobile)](http://html5boilerplate.com/mobile)
 
 All honor and thanks goes to the skilled people working on that great mentioned open source projects.
-
-## Requirements
-
-Please download iscroll4 and extract it to ./lib/iscroll4
 
 ## TODO
 
