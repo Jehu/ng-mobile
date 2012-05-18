@@ -82,5 +82,5 @@ function BasicsCntl($scope) {
 
 function MarkupCntl($scope) {
     var s = $scope;
-    s.setHeaderText('Markup');
+    $scope.setHeaderText('Custom Header with back-btn');
 }
