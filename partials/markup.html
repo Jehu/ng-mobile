@@ -1,0 +1,35 @@
+<div ng-controller="MarkupCntl">
+    <div id="wrapper">
+        <div id="scroller">
+
+<section>
+<h2>Basic View Markup</h1> 
+<p>Every configured route loads a partial (a piece of html) dynamically. These partials represents the pages of your mobile website or application.</p>
+<p>The simplest markup looks like this:</p>
+<pre><code>
+&lt;div ng-controller=&quot;MyCoolCntl&quot;&gt;
+    &lt;div id=&quot;wrapper&quot;&gt;
+        &lt;div id=&quot;scroller&quot;&gt;
+           ... here is your content ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><em>MyCoolCntl</em> is the example name of the angular controller. See <a href="http://docs.angularjs.org/guide/dev_guide.mvc.understanding_controller">Angular.js documentation</a> for further informations.</p>
+<p>The both div containers with id <em>"wrapper"</em> and <em>"scroller"</em> must be there to make the header and footer sections fix and the content area scrollable. This is possible by using the <a href="http://jscrollpane.kelvinluck.com">jScrollPane Library</a>. An alternative might be <a href="http://cubiq.org/iscroll-4">iScroll4</a>, but i've replaced it by jScrollPane. (Feel free to use iScroll4 instead if you prefer it. See ng-mobile.js to get it work).</p>
+</section>
+
+<section>
+<h2>Inner wrap to get some spacing</h2>
+<p>If you want to add some spacing between content and the left and the right display border you can wrap your page content in a wrapper:</p>
+<pre><code>
+&lt;div class=&quot;inner-wrap&quot;&gt;
+... the content comes here ...
+&lt;/div
+</pre></code>
+<p>Place this wrapper inside of the container with id <em>"scroller"</em></p>
+<p>This can be helpful in some cases (e.g. if you have a lot of text), but you can also use the CSS class <em>inset</em> to add some space around particular elements, like <em>ul.listview</em>, because the <em>ul.listview</em> uses 100% of screen width although inside a <em>inner-wrap.</em></p>
+</section>
+        </div>
+    </div>
+</div>

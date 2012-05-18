@@ -7,10 +7,10 @@ ngMobile.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/demo', { template: 'partials/demo.html', controller: DemoCntl });
     $routeProvider.when('/form', { template: 'partials/form.html', controller: FormCntl });
     $routeProvider.when('/list', { template: 'partials/list.html', controller: ListCntl });
-
     $routeProvider.when('/basics', { template: 'partials/basics.html', controller: BasicsCntl });
+    $routeProvider.when('/markup', { template: 'partials/markup.html', controller: MarkupCntl });
 
-    $routeProvider.otherwise({ template: 'partials/start.html', controller: StartCntl });
+    $routeProvider.otherwise({ redirectTo: '/start' });
 
     // this must be to get it work! dont't change if you don't know exactly what you do...
     $locationProvider.html5Mode(false).hashPrefix('');
@@ -78,4 +78,9 @@ function BasicsCntl($scope) {
     var s = $scope;
 
     s.setHeaderText('Basics');
+}
+
+function MarkupCntl($scope) {
+    var s = $scope;
+    s.setHeaderText('Markup');
 }
