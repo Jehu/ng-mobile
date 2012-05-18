@@ -37,20 +37,22 @@
         <!-- more tags for your 'head' to consider h5bp.com/d/head-Tips -->
 
         <!-- Main Stylesheet -->
-        <link href="css/ng-mobile.css" rel="stylesheet" type="text/css" />
-        <!-- Custom Stylesheets -->
-        <link href="css/custom.css" rel="stylesheet" type="text/css" />
+        <link href="lib/jscrollpane/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+        <link href="css/custom-theme.css" rel="stylesheet" type="text/css" />
 
         <script src="./lib/jquery-1.7.2.min.js" type="application/javascript"></script>
         <script src="./lib/angular-1.0.0rc7_patched_for_android.js" type="application/javascript"></script>
-        <script src="./lib/iscroll4/src/iscroll.js" type="application/javascript"></script>
         <script src="./lib/underscore-min.js" type="application/javascript"></script>
+        <!-- the mousewheel plugin is optional for jScrollPane if your all should be used in desktop browsers -->
+        <script src="./lib/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="./lib/jscrollpane/jquery.jscrollpane.min.js"></script>
+
         <script src="./lib/ng-mobile.js"></script>
 
         <script src="app.dist.js"></script>
 
         <script type="text/javascript">
-            // for iScroll
+            // prevent scolling/scrollbars because we have jScrollPane for that
             document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
         </script>
     </head>

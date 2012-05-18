@@ -12,6 +12,15 @@
                     </a>
                 </li>
             </ul>
+            <ul class="listview-splitbtn inset">
+                <li ng-repeat="item in listData">
+                    <a href="#">
+                        <h2 ng-bind="item.title"></h2>
+                        <p ng-bind="item.text"></p>
+                    </a>
+                    <a href="#">&nbsp;</a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
