@@ -25,6 +25,11 @@ a
     text-decoration: none
     color: #000
 
+a:active, a:focus, a:hover, a:link, a, button, input[type=submit]
+  outline: none
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+
+
 body, ul, li
   padding: 0
   margin: 0
@@ -93,46 +98,31 @@ footer, #footer
     z-index: 999
 
 #scroller
-  position: absolute
+  position: relative
   z-index: 1
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
   width: 100%
   padding: 0
-  ul
-    list-style: none
-    padding: 0
-    margin: 0
-    width: 100%
-    text-align: left
-  li
-    font-size: 14px
 
 footer > ul, #footer > ul
-  margin: 0
+  display: table
   width: 100%
-  list-style-type: none
-  overflow: hidden
-  text-align: center
-
-footer > ul > li, #footer > ul > li
-  /*float: left;
-  display: inline-block
-  overflow: hidden
-  line-height: 100%
-
-footer > ul > li > a, #footer > ul > li > a
-  display: block
-  width: 40px
-  height: 43px
-  padding-top: 5px 
-  text-align: center
-  text-decoration: none !important
-  color: #fff !important
+  table-layout: fixed
+  > li
+    display: table-cell
+    overflow: hidden
+    line-height: 100%
+    > a
+      display: block
+      width: auto
+      height: 43px
+      margin: 0
+      text-align: center
+      padding: 0 1px
+      color: #fff !important
 
 footer > ul > li > a.active, #footer > ul > li > a.active
   @include background-image(linear-gradient(top, #666666, #999999 2%, #222222))
-
-/*footer > ul > li > a:active, #footer > ul > li > a:active, footer > ul > li > a:hover, #footer > ul > li > a:hover
 
 .inner-wrap
   padding: 0 10px
@@ -141,7 +131,7 @@ footer > ul > li > a.active, #footer > ul > li > a.active
 
 /* listview
 
-ul.listview li
+ul.listview > li
   overflow: hidden
   padding: 0 10px
   line-height: 100%
@@ -169,8 +159,56 @@ ul.listview li
       top: 10px
       font-weight: bold
       font-size: 18px
-      right: 15px
+      right: 5px
       color: $default-text-color
+
+ul.listview-splitbtn > li
+  overflow: hidden
+  position: relative
+  padding: 0 10px
+  line-height: 100%
+  height: auto
+  border-bottom: 1px solid #ccc
+  border-top: 1px solid #fff
+  background-color: #fafafa
+  h2
+    font-size: 18px
+    font-weight: bold
+    margin: 8px 0 4px 0
+  p
+    margin: 4px 0 8px 0
+  > a
+    position: relative
+    overflow: hidden
+    display: block
+    font-size: 14px
+    font-weight: normal 
+    color: $default-text-color
+    text-decoration: none
+    padding-right: 30px
+    &:nth-child(1n+1)
+      background: none
+    &:nth-child(1n+2)
+      color: transparent
+      position: absolute
+      width: 40px
+      height: 40px
+      right: 0 
+      top: 0
+      margin: 0
+      padding: 0
+      z-index: 2
+      background: url('./img/plus-circle-frame.png') no-repeat scroll 50% 50%
+
+.inset
+  margin: 10px
+  padding: 5px
+  border: 1px solid $lighter-text-color
+  @include border-radius(5px)
+  > li 
+    @include border-radius(5px)
+
+
 
 /* forms begin =>
 
@@ -225,6 +263,15 @@ form
     clear: both
     overflow: hidden
     height: 40px
+    &.align-left
+      text-align: left
+    &.row-textarea
+      height: auto
+    &.row-textarea > textarea
+      width: 100%
+      border: 0 none
+      margin: 5px 0 9px 0
+      padding: 10px 10px 10px 14px
     > label
       padding-top: 3px
       display: block
@@ -235,9 +282,7 @@ form
         right: 10px
         top: 0
         width: auto
-    > input[type=text],
-    > input[type=textarea],
-    > input[type=password]
+    > input
       position: absolute
       right: 10px
       top: 0
@@ -268,6 +313,10 @@ form
         padding: 0
         position: relative
       
+
+
+
+
 
 a.btn, button, input[type=submit]
   -moz-box-shadow: inset 0px 1px 0px 0px #ffffff
@@ -308,3 +357,41 @@ header a.btn.back,
   padding: 6px 10px
 
 
+/* => dialogs start
+div.dialog
+  position: absolute
+  top: 0
+  bottom: 0%
+  left: 0
+  right: 0%
+  z-index: 99
+  background-color: rgba(0,0,0,0.8)
+  .wrapper 
+    background-color: #d8d8d8
+    text-align: center
+    width: 90%
+    margin: 35px auto 0 auto
+    padding: 10px
+    border: 1px solid $lighter-text-color
+    @include border-radius(5px)
+  ul
+    list-style-type: none
+    left: 0
+    margin: 0
+    padding: 0
+    li
+      padding: 5px 0
+      button
+        width: 90%
+        padding: 10px
+
+/* <= dialogs end
+
+/* span-list is a comma seperated list of items 
+p.span-list
+  white-space: nowrap
+  > span
+    &:before
+      content: ", "
+      padding: 0
+      margin: 0

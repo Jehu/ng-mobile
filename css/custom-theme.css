@@ -371,8 +371,7 @@ form .row > label {
   font-weight: bold;
 }
 /* line 279, ../sass/ng-mobile.sass */
-form .row > label > input[type=radio],
-form .row > label > input[type=checkbox] {
+form .row > label > input[type=radio], form .row > label > input[type=checkbox] {
   position: absolute;
   right: 10px;
   top: 0;
@@ -396,8 +395,7 @@ form .row > label.bg {
   padding: 10px;
 }
 /* line 294, ../sass/ng-mobile.sass */
-form .row > label.bg > input[type=radio],
-form .row > label.bg > input[type=checkbox] {
+form .row > label.bg > input[type=radio], form .row > label.bg > input[type=checkbox] {
   position: absolute;
   top: 10px;
 }
@@ -416,8 +414,7 @@ form .row.group > label {
   font-weight: bold;
 }
 /* line 309, ../sass/ng-mobile.sass */
-form .row.group > label > input[type=radio],
-form .row.group > label > input[type=checkbox] {
+form .row.group > label > input[type=radio], form .row.group > label > input[type=checkbox] {
   width: auto;
   margin: 0 50%;
   padding: 0;
