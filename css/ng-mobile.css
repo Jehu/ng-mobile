@@ -423,8 +423,13 @@ form .row.group > label > input[type=checkbox] {
   padding: 0;
   position: relative;
 }
+/* line 315, ../sass/ng-mobile.sass */
+form .row.button-row {
+  text-align: right;
+  padding: 0 5px;
+}
 
-/* line 321, ../sass/ng-mobile.sass */
+/* line 319, ../sass/ng-mobile.sass */
 a.btn, button, input[type=submit] {
   -moz-box-shadow: inset 0px 1px 0px 0px white;
   -webkit-box-shadow: inset 0px 1px 0px 0px white;
@@ -443,14 +448,14 @@ a.btn, button, input[type=submit] {
   text-decoration: none;
   text-shadow: 1px 1px 0px white;
 }
-/* line 338, ../sass/ng-mobile.sass */
+/* line 336, ../sass/ng-mobile.sass */
 a.btn:active, button:active, input[type=submit]:active {
   position: relative;
   top: 1px;
 }
 
 /* <= forms end */
-/* line 345, ../sass/ng-mobile.sass */
+/* line 343, ../sass/ng-mobile.sass */
 header a.btn.back,
 #header a.btn.back {
   position: absolute;
@@ -467,7 +472,7 @@ header a.btn.back,
 }
 
 /* => dialogs start */
-/* line 361, ../sass/ng-mobile.sass */
+/* line 359, ../sass/ng-mobile.sass */
 div.dialog {
   position: absolute;
   top: 0;
@@ -477,7 +482,7 @@ div.dialog {
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 369, ../sass/ng-mobile.sass */
+/* line 367, ../sass/ng-mobile.sass */
 div.dialog .wrapper {
   background-color: #d8d8d8;
   text-align: center;
@@ -491,18 +496,18 @@ div.dialog .wrapper {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 377, ../sass/ng-mobile.sass */
+/* line 375, ../sass/ng-mobile.sass */
 div.dialog ul {
   list-style-type: none;
   left: 0;
   margin: 0;
   padding: 0;
 }
-/* line 382, ../sass/ng-mobile.sass */
+/* line 380, ../sass/ng-mobile.sass */
 div.dialog ul li {
   padding: 5px 0;
 }
-/* line 384, ../sass/ng-mobile.sass */
+/* line 382, ../sass/ng-mobile.sass */
 div.dialog ul li button {
   width: 90%;
   padding: 10px;
@@ -510,13 +515,22 @@ div.dialog ul li button {
 
 /* <= dialogs end */
 /* span-list is a comma seperated list of items */
-/* line 391, ../sass/ng-mobile.sass */
+/* line 389, ../sass/ng-mobile.sass */
 p.span-list {
   white-space: nowrap;
 }
-/* line 394, ../sass/ng-mobile.sass */
+/* line 392, ../sass/ng-mobile.sass */
 p.span-list > span:before {
   content: ", ";
   padding: 0;
   margin: 0;
+}
+
+/* line 397, ../sass/ng-mobile.sass */
+header h1,
+#header h1 {
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
