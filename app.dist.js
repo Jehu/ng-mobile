@@ -7,7 +7,7 @@ ngMobile.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/demo', { template: 'partials/demo.html', controller: DemoCntl });
     $routeProvider.when('/form', { template: 'partials/form.html', controller: FormCntl });
     $routeProvider.when('/list', { template: 'partials/list.html', controller: ListCntl });
-    $routeProvider.otherwise({ template: 'partials/default.html', controller: StartCntl });
+    $routeProvider.otherwise({ redirectTo: '/start' });
 
     // this must be to get it work! dont't change if you don't know exactly what you do...
     $locationProvider.html5Mode(false).hashPrefix('');
