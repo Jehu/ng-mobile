@@ -43,14 +43,78 @@
 
 <section>
 <h2>Footer</h2>
-<p></p>
+<p>The footer contains navigation in most cases. By default in index.html loads the partial "partials/default_navigation.html" to footer.</p>
+<p>You can override the footer for some pages, if you want:</p>
+<pre><code>
+&lt;div id=&quot;footer&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#start&quot; class=&quot;icon home&quot;&gt;&lt;span&gt;Start&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#basics&quot; class=&quot;icon pencil&quot;&gt;&lt;span&gt;Basics&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre></code>
+<p>Another way to override is to set the global "footer" element content in your controllers:</p>
+<pre><code>
+$scope.setPartial('footer', 'partials/other_footer.html');
+</pre></code>
 </secton>
+
+<section>
+<h2>Navigation</h2>
+<p>By default the navigation is placed in the footer of your mobile page, like seen above. This is a good idea for portrait orientation of a mobile device. But if one rotate it, it would be nice to have navigation at the left side instead.</p>
+<p>This is done by CSS media queries in ng-mobile.sass. The element <em>nav</em> will be used to show a navigation at the left, while footer is hidden.</p>
+<p><em>nav</em> is placed in index.html even like <em>header</em> and <em>footer</em>. It loads the default partial "default_navigation.html" and can be overridden by a div with id "nav" in partials.</p>
+<p><strong>Note:</strong> <em>Minimum width in landscape mode must be 600px, otherwise the footer remains.</em></p>
+<pre><code>
+&lt;div id=&quot;footer&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#start&quot; class=&quot;icon home&quot;&gt;&lt;span&gt;Start&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#basics&quot; class=&quot;icon pencil&quot;&gt;&lt;span&gt;Basics&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&quot;nav&quot; ng-include=&quot;naviInc&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#start&quot; class=&quot;icon home&quot;&gt;&lt;span&gt;Start&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#basics&quot; class=&quot;icon pencil&quot;&gt;&lt;span&gt;Basics&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre></code>
+<p>Another way to override is to set the global "nav" element content in your controllers:</p>
+<pre><code>
+$scope.setPartial('navigation', 'partials/other_navigation.html');
+</pre></code>
+<h3>Use the same Template for footer and nav</h3>
+<p>Perhaps it would be nicer to use the same template for both? Dead simple!</p>
+<pre><code>
+&lt;div id=&quot;footer&quot; ng-include=&quot;navInc&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;nav&quot; ng-include=&quot;navInc&quot;&gt;&lt;/div&gt;
+</pre></code>
+<p>In your controller you have to fill the variable for "navInc" (you can rename it of course...):</p>
+<pre><code>
+$scope.navInc = 'partials/my_custom_navigation.html';
+</pre></code>
+<p>Another way to override is to set the global "nav"  and "footer" element content in your controllers:</p>
+<pre><code>
+$scope.setPartial('footer', 'partials/other_navigation.html');
+$scope.setPartial('navigation', 'partials/other_navigation.html');
+</pre></code>
+<p>In this case you should not have a #footer and #nav containers in your partial...</p>
+<h3>No left sided navigation please!</h3>
+<p>If you don't want to use left side navigation, it is neseccary you override the media query (see ng-mobile.sass) in your custom-theme.sass.</p>
+</section>
 
         </div>
     </div>
     <div id="footer">
         <ul>
-            <li><a href="#start" class="icon home">Start</a></li>
+            <li><a href="#start" class="icon home"><span>Start</span></a></li>
+            <li><a href="#basics" class="icon pencil"><span>Basics</span></a></li>
+        </ul>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="#start" class="icon home"><span>Start</span></a></li>
+            <li><a href="#basics" class="icon pencil"><span>Basics</span></a></li>
         </ul>
     </div>
 </div>
