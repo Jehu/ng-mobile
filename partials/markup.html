@@ -7,7 +7,7 @@
         <div id="scroller">
 
 <section>
-<h2>Basic View Markup</h1> 
+<h2>Basic View Markup</h2> 
 <p>Every configured route loads a partial (a piece of html) dynamically. These partials represents the pages of your mobile website or application.</p>
 <p>The simplest markup looks like this:</p>
 <pre><code>
@@ -26,11 +26,13 @@
 <section>
 <h2>Inner wrap to get some spacing</h2>
 <p>If you want to add some spacing between content and the left and the right display border you can wrap your page content in a wrapper:</p>
+
 <pre><code>
 &lt;div class=&quot;inner-wrap&quot;&gt;
 ... the content comes here ...
 &lt;/div
-</pre></code>
+</code></pre>
+
 <p>Place this wrapper inside of the container with id <em>"scroller"</em></p>
 <p>This can be helpful in some cases (e.g. if you have a lot of text), but you can also use the CSS class <em>inset</em> to add some space around particular elements, like <em>ul.listview</em>, because the <em>ul.listview</em> uses 100% of screen width although inside a <em>inner-wrap.</em></p>
 </section>
@@ -41,14 +43,14 @@
 <p>Often the header holds the page name only. This is easy. Just set an title in the controllers:</p>
 <pre><code>
 $scope.setHeaderText('My header text');
-</pre></code>
+</code></pre>
 
 <p>You can override the default header inside of yout partials by placing an div#header with some content. Then you can add some other markup, e.g. some buttons:</p>
 <pre><code>
 &lt;div id=&quot;header&quot;&gt;
     &lt;h1&gt;{ {txtHeader} }&lt;/h1&gt;
 &lt;/div&gt;
-</pre></code>
+</code></pre>
 
 <h3>Back-Button</h3>
 <p>You can place a back-button in your header partial or inside your custom header container. The Button text will be automatically the title of the previous seen page. The button will be hidden, if no previous page exists:</p>
@@ -57,8 +59,8 @@ $scope.setHeaderText('My header text');
     &lt;a href=&quot;&#123; &#123;previousPage.hash&#125; &#125;&quot; ng-show=&quot;previousPage.txtHeader&quot; class=&quot;btn back&quot;&gt;&#123;&#123;previousPage.txtHeader&#125;&#125;&lt;/a&gt;
     &lt;h1&gt;&#123; &#123;txtHeader&#125; &#125;&lt;/h1&gt;
 &lt;/div&gt;
-</pre></code>
-</secton>
+</code></pre>
+</section>
 
 <section>
 <h2>Footer</h2>
@@ -71,12 +73,12 @@ $scope.setHeaderText('My header text');
         &lt;li&gt;&lt;a href=&quot;#basics&quot; class=&quot;icon pencil&quot;&gt;&lt;span&gt;Basics&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
-</pre></code>
+</code></pre>
 <p>Another way to override is to set the global "footer" element content in your controllers:</p>
 <pre><code>
 $scope.setPartial('footer', 'partials/other_footer.html');
-</pre></code>
-</secton>
+</code></pre>
+</section>
 
 <section>
 <h2>Navigation</h2>
@@ -97,26 +99,26 @@ $scope.setPartial('footer', 'partials/other_footer.html');
         &lt;li&gt;&lt;a href=&quot;#basics&quot; class=&quot;icon pencil&quot;&gt;&lt;span&gt;Basics&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
-</pre></code>
+</code></pre>
 <p>Another way to override is to set the global "nav" element content in your controllers:</p>
 <pre><code>
 $scope.setPartial('navigation', 'partials/other_navigation.html');
-</pre></code>
+</code></pre>
 <h3>Use the same Template for footer and nav</h3>
 <p>Perhaps it would be nicer to use the same template for both? Dead simple!</p>
 <pre><code>
 &lt;div id=&quot;footer&quot; ng-include=&quot;navInc&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;nav&quot; ng-include=&quot;navInc&quot;&gt;&lt;/div&gt;
-</pre></code>
+</code></pre>
 <p>In your controller you have to fill the variable for "navInc" (you can rename it of course...):</p>
 <pre><code>
 $scope.navInc = 'partials/my_custom_navigation.html';
-</pre></code>
+</code></pre>
 <p>Another way to override is to set the global "nav"  and "footer" element content in your controllers:</p>
 <pre><code>
 $scope.setPartial('footer', 'partials/other_navigation.html');
 $scope.setPartial('navigation', 'partials/other_navigation.html');
-</pre></code>
+</code></pre>
 <p>In this case you should not have a #footer and #nav containers in your partial...</p>
 <h3>No left sided navigation please!</h3>
 <p>If you don't want to use left side navigation, it is neseccary you override the media query (see ng-mobile.sass) in your custom-theme.sass.</p>

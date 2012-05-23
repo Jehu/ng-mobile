@@ -9,6 +9,7 @@ $default-text-shadow-v-offset: 1px
 @import "icons.css"
 @import "compass/css3"
 
+
 /* minimal Button Style
 @mixin minimal
   background: #e3e3e3
@@ -428,10 +429,14 @@ p.span-list
       margin: 0
 
 /* show / hide sidebar navigation
+nav, #nav
+  display: none!important
+
 @media screen  and (orientation:landscape) and (min-width: 600px)
   #footer, footer
     display: none!important
   nav, #nav
+    display: block!important
     position: absolute
     top: 45px
     width: 20%
