@@ -59,7 +59,8 @@
     <body ng-app="ngMobile" ng-controller="MainCntl" ng-cloak>
         <header ng-include="header"></header>
         <div ng-view id="content"></div>
-        <footer ng-include="footer"></footer>
+        <nav ng-include="navigation"></nav>
+        <footer ng-include="navigation"></footer>
         <div id="loader" ngm-remove-preloader></div>
     </body>
 </html>

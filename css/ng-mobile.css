@@ -1,280 +1,7 @@
 @import url(boilerplate.css);
-@font-face {
-  font-family: "IcoMoon";
-  src: url("icons.ttf") format("truetype"), url("icons.svg#") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* line 9, ../sass/icons.sass */
-.icon:before {
-  color: inherit;
-  font-weight: normal !important;
-  font-family: "IcoMoon";
-  padding: 5px;
-  float: left;
-  font-size: 28px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: auto;
-}
-/* line 19, ../sass/icons.sass */
-.icon.mini:before {
-  font-size: 20px !important;
-  height: 16px !important;
-  width: 16px !important;
-  line-height: 16px !important;
-}
-/* line 24, ../sass/icons.sass */
-.icon.big:before {
-  font-size: 40px !important;
-  height: 32px !important;
-  width: 32px !important;
-  line-height: 32px !important;
-}
-
-/* line 30, ../sass/icons.sass */
-footer .icon, #footer .icon {
-  font-size: 12px;
-}
-
-/* line 33, ../sass/icons.sass */
-footer .icon:before, #footer .icon:before {
-  clear: both;
-  float: none;
-  display: block;
-}
-
-/* line 39, ../sass/icons.sass */
-.icon.home:before {
-  content: "!";
-}
-/* line 41, ../sass/icons.sass */
-.icon.pencil:before {
-  content: "\22";
-}
-/* line 43, ../sass/icons.sass */
-.icon.picture:before {
-  content: "#";
-}
-/* line 45, ../sass/icons.sass */
-.icon.camera:before {
-  content: "$";
-}
-/* line 47, ../sass/icons.sass */
-.icon.headset:before {
-  content: "%";
-}
-/* line 49, ../sass/icons.sass */
-.icon.paper:before {
-  content: "&";
-}
-/* line 51, ../sass/icons.sass */
-.icon.stack:before {
-  content: "\27";
-}
-/* line 53, ../sass/icons.sass */
-.icon.folder:before {
-  content: "(";
-}
-/* line 55, ../sass/icons.sass */
-.icon.tag:before {
-  content: ")";
-}
-/* line 57, ../sass/icons.sass */
-.icon.basket:before {
-  content: "*";
-}
-/* line 59, ../sass/icons.sass */
-.icon.phone:before {
-  content: "+";
-}
-/* line 61, ../sass/icons.sass */
-.icon.mail:before {
-  content: ",";
-}
-/* line 63, ../sass/icons.sass */
-.icon.location:before {
-  content: "-";
-}
-/* line 65, ../sass/icons.sass */
-.icon.clock:before {
-  content: ".";
-}
-/* line 67, ../sass/icons.sass */
-.icon.calendar:before {
-  content: "/";
-}
-/* line 69, ../sass/icons.sass */
-.icon.message:before {
-  content: "0";
-}
-/* line 71, ../sass/icons.sass */
-.icon.chat:before {
-  content: "1";
-}
-/* line 73, ../sass/icons.sass */
-.icon.user:before {
-  content: "2";
-}
-/* line 75, ../sass/icons.sass */
-.icon.loading:before {
-  content: "3";
-}
-/* line 77, ../sass/icons.sass */
-.icon.refresh:before {
-  content: "4";
-}
-/* line 79, ../sass/icons.sass */
-.icon.magnifier:before {
-  content: "5";
-}
-/* line 81, ../sass/icons.sass */
-.icon.key:before {
-  content: "6";
-}
-/* line 83, ../sass/icons.sass */
-.icon.settings:before {
-  content: "7";
-}
-/* line 85, ../sass/icons.sass */
-.icon.graph:before {
-  content: "8";
-}
-/* line 87, ../sass/icons.sass */
-.icon.trash:before {
-  content: "9";
-}
-/* line 89, ../sass/icons.sass */
-.icon.pin:before {
-  content: ":";
-}
-/* line 91, ../sass/icons.sass */
-.icon.target:before {
-  content: ";";
-}
-/* line 93, ../sass/icons.sass */
-.icon.download:before {
-  content: "<";
-}
-/* line 95, ../sass/icons.sass */
-.icon.upload:before {
-  content: "=";
-}
-/* line 97, ../sass/icons.sass */
-.icon.star:before {
-  content: ">";
-}
-/* line 99, ../sass/icons.sass */
-.icon.heart:before {
-  content: "?";
-}
-/* line 101, ../sass/icons.sass */
-.icon.warning:before {
-  content: "@";
-}
-/* line 103, ../sass/icons.sass */
-.icon.add:before {
-  content: "A";
-}
-/* line 105, ../sass/icons.sass */
-.icon.remove:before {
-  content: "B";
-}
-/* line 107, ../sass/icons.sass */
-.icon.question:before {
-  content: "C";
-}
-/* line 109, ../sass/icons.sass */
-.icon.info:before {
-  content: "D";
-}
-/* line 111, ../sass/icons.sass */
-.icon.error:before {
-  content: "E";
-}
-/* line 113, ../sass/icons.sass */
-.icon.check:before {
-  content: "F";
-}
-/* line 115, ../sass/icons.sass */
-.icon.minimize:before {
-  content: "G";
-}
-/* line 117, ../sass/icons.sass */
-.icon.close:before {
-  content: "H";
-}
-/* line 119, ../sass/icons.sass */
-.icon.up:before {
-  content: "I";
-}
-/* line 121, ../sass/icons.sass */
-.icon.down:before {
-  content: "J";
-}
-/* line 123, ../sass/icons.sass */
-.icon.left:before {
-  content: "K";
-}
-/* line 125, ../sass/icons.sass */
-.icon.right:before {
-  content: "L";
-}
-/* line 127, ../sass/icons.sass */
-.icon.tools:before {
-  content: "M";
-}
-/* line 129, ../sass/icons.sass */
-.icon.html5:before {
-  content: "N";
-}
-/* line 131, ../sass/icons.sass */
-.icon.css:before {
-  content: "O";
-}
-/* line 133, ../sass/icons.sass */
-.icon.js:before {
-  content: "P";
-}
-/* line 135, ../sass/icons.sass */
-.icon.cloud:before {
-  content: "Q";
-}
-/* line 137, ../sass/icons.sass */
-.icon.tv:before {
-  content: "R";
-}
-/* line 139, ../sass/icons.sass */
-.icon.wifi:before {
-  content: "S";
-}
-/* line 141, ../sass/icons.sass */
-.icon.new:before {
-  content: "T";
-}
-/* line 143, ../sass/icons.sass */
-.icon.mic:before {
-  content: "U";
-}
-/* line 145, ../sass/icons.sass */
-.icon.database:before {
-  content: "V";
-}
-/* line 147, ../sass/icons.sass */
-.icon.busy:before {
-  content: "W";
-}
-/* line 149, ../sass/icons.sass */
-.icon.bug:before {
-  content: "X";
-}
-/* line 151, ../sass/icons.sass */
-.icon.lamp:before {
-  content: "Y";
-}
-
-/* line 12, ../sass/ng-mobile.sass */
+@import url(icons.css);
+/* minimal Button Style */
+/* line 35, ../sass/ng-mobile.sass */
 #loader {
   position: absolute;
   top: 0;
@@ -285,31 +12,31 @@ footer .icon:before, #footer .icon:before {
   background: #d8d8d8 url(img/loader.gif) no-repeat scroll 50% 50%;
 }
 
-/* line 21, ../sass/ng-mobile.sass */
+/* line 44, ../sass/ng-mobile.sass */
 a {
   text-decoration: none;
   color: black;
 }
-/* line 24, ../sass/ng-mobile.sass */
-a:link, a:hover, a:active, a:visited {
+/* line 47, ../sass/ng-mobile.sass */
+a:link, a:hover, a:active {
   text-decoration: none;
   color: black;
 }
 
-/* line 28, ../sass/ng-mobile.sass */
+/* line 51, ../sass/ng-mobile.sass */
 a:active, a:focus, a:hover, a:link, a, button, input[type=submit] {
   outline: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 33, ../sass/ng-mobile.sass */
+/* line 55, ../sass/ng-mobile.sass */
 body, ul, li {
   padding: 0;
   margin: 0;
   border: 0;
 }
 
-/* line 38, ../sass/ng-mobile.sass */
+/* line 60, ../sass/ng-mobile.sass */
 body {
   font-size: 14px;
   -webkit-user-select: none;
@@ -318,7 +45,7 @@ body {
   background-color: #d2d2d2;
 }
 
-/* line 45, ../sass/ng-mobile.sass */
+/* line 67, ../sass/ng-mobile.sass */
 header, #header {
   position: absolute;
   z-index: 2;
@@ -328,19 +55,18 @@ header, #header {
   height: 45px;
   line-height: 45px;
   background-color: #d51875;
-  /*@include background-image(linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e)) */
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #47636d), color-stop(5%, #84a7b4), color-stop(100%, #238db3));
-  background-image: -webkit-linear-gradient(top, #47636d, #84a7b4 5%, #238db3);
-  background-image: -moz-linear-gradient(top, #47636d, #84a7b4 5%, #238db3);
-  background-image: -o-linear-gradient(top, #47636d, #84a7b4 5%, #238db3);
-  background-image: -ms-linear-gradient(top, #47636d, #84a7b4 5%, #238db3);
-  background-image: linear-gradient(top, #47636d, #84a7b4 5%, #238db3);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7d7e7d), color-stop(100%, #0e0e0e));
+  background-image: -webkit-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  background-image: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  background-image: -o-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  background-image: -ms-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  background-image: linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
   padding: 0;
   color: #eeeeee;
   text-align: center;
 }
 
-/* line 60, ../sass/ng-mobile.sass */
+/* line 81, ../sass/ng-mobile.sass */
 header a, #header a {
   color: #f3f3f3;
   text-decoration: none;
@@ -348,16 +74,18 @@ header a, #header a {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* line 66, ../sass/ng-mobile.sass */
+/* line 87, ../sass/ng-mobile.sass */
 header h1, #header h1 {
   font-size: 20px;
   line-height: 45px;
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* line 73, ../sass/ng-mobile.sass */
+/* line 96, ../sass/ng-mobile.sass */
 footer, #footer {
   position: absolute;
   z-index: 2;
@@ -366,59 +94,29 @@ footer, #footer {
   width: 100%;
   height: 48px;
   background-color: #222222;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(2%, #666666), color-stop(100%, #222222));
-  background-image: -webkit-linear-gradient(top, #999999, #666666 2%, #222222);
-  background-image: -moz-linear-gradient(top, #999999, #666666 2%, #222222);
-  background-image: -o-linear-gradient(top, #999999, #666666 2%, #222222);
-  background-image: -ms-linear-gradient(top, #999999, #666666 2%, #222222);
-  background-image: linear-gradient(top, #999999, #666666 2%, #222222);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7d7e7d), color-stop(100%, #0e0e0e));
+  background-image: -webkit-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  background-image: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  background-image: -o-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  background-image: -ms-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  background-image: linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
   padding: 0;
   border-top: 1px solid #444444;
 }
 
-/* line 85, ../sass/ng-mobile.sass */
-#content .ng-scope > form {
-  padding: 55px 0 0 0;
-}
-
-/* line 88, ../sass/ng-mobile.sass */
-#wrapper {
-  position: absolute;
-  z-index: 1;
-  top: 45px;
-  bottom: 48px;
-  left: 0;
-  width: 100%;
-  background: #d2d2d2;
-  overflow: auto;
-}
-/* line 97, ../sass/ng-mobile.sass */
-#wrapper label, #wrapper input {
-  z-index: 999;
-}
-
-/* line 100, ../sass/ng-mobile.sass */
-#scroller {
-  position: relative;
-  z-index: 1;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  width: 100%;
-  padding: 0;
-}
-
-/* line 107, ../sass/ng-mobile.sass */
+/* line 108, ../sass/ng-mobile.sass */
 footer > ul, #footer > ul {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-/* line 111, ../sass/ng-mobile.sass */
+/* line 112, ../sass/ng-mobile.sass */
 footer > ul > li, #footer > ul > li {
   display: table-cell;
   overflow: hidden;
   line-height: 100%;
 }
-/* line 115, ../sass/ng-mobile.sass */
+/* line 116, ../sass/ng-mobile.sass */
 footer > ul > li > a, #footer > ul > li > a {
   display: block;
   width: auto;
@@ -428,7 +126,6 @@ footer > ul > li > a, #footer > ul > li > a {
   padding: 0 1px;
   color: white !important;
 }
-
 /* line 124, ../sass/ng-mobile.sass */
 footer > ul > li > a.active, #footer > ul > li > a.active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(2%, #999999), color-stop(100%, #222222));
@@ -439,13 +136,91 @@ footer > ul > li > a.active, #footer > ul > li > a.active {
   background-image: linear-gradient(top, #666666, #999999 2%, #222222);
 }
 
-/* line 127, ../sass/ng-mobile.sass */
+/* line 129, ../sass/ng-mobile.sass */
+nav > ul > li, #nav > ul > li {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefcea), color-stop(100%, #f1da36));
+  background-image: -webkit-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+  background-image: -moz-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+  background-image: -o-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+  background-image: -ms-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+  background-image: linear-gradient(top, #fefcea 0%, #f1da36 100%);
+  overflow: hidden;
+  list-style-type: none;
+  display: block;
+}
+/* line 134, ../sass/ng-mobile.sass */
+nav > ul > li a, #nav > ul > li a {
+  display: table;
+  width: 100%;
+  height: 100%;
+  float: left;
+  color: #222222 !important;
+}
+/* line 140, ../sass/ng-mobile.sass */
+nav > ul > li a.active, #nav > ul > li a.active {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e8ffc1), color-stop(100%, #84e534));
+  background-image: -webkit-linear-gradient(top, #e8ffc1 0%, #84e534 100%);
+  background-image: -moz-linear-gradient(top, #e8ffc1 0%, #84e534 100%);
+  background-image: -o-linear-gradient(top, #e8ffc1 0%, #84e534 100%);
+  background-image: -ms-linear-gradient(top, #e8ffc1 0%, #84e534 100%);
+  background-image: linear-gradient(top, #e8ffc1 0%, #84e534 100%);
+}
+/* line 142, ../sass/ng-mobile.sass */
+nav > ul > li *, #nav > ul > li * {
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 145, ../sass/ng-mobile.sass */
+nav > ul > li a > span, #nav > ul > li a > span {
+  display: table-cell;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  min-height: 45px;
+}
+
+/* line 152, ../sass/ng-mobile.sass */
+#content .ng-scope > form {
+  padding: 55px 0 0 0;
+}
+
+/* line 155, ../sass/ng-mobile.sass */
+#wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 45px;
+  bottom: 48px;
+  left: 0;
+  width: 100%;
+  background: #d2d2d2;
+  overflow: auto;
+}
+/* line 164, ../sass/ng-mobile.sass */
+#wrapper label, #wrapper input {
+  z-index: 999;
+}
+
+/* line 167, ../sass/ng-mobile.sass */
+#wrapper {
+  width: 100%;
+}
+
+/* line 170, ../sass/ng-mobile.sass */
+#scroller {
+  position: relative;
+  z-index: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  padding: 0;
+}
+
+/* line 177, ../sass/ng-mobile.sass */
 .inner-wrap {
   padding: 0 10px;
 }
 
 /* listview */
-/* line 134, ../sass/ng-mobile.sass */
+/* line 182, ../sass/ng-mobile.sass */
 ul.listview > li {
   overflow: hidden;
   padding: 0 10px;
@@ -455,17 +230,17 @@ ul.listview > li {
   border-top: 1px solid white;
   background-color: #fafafa;
 }
-/* line 142, ../sass/ng-mobile.sass */
+/* line 190, ../sass/ng-mobile.sass */
 ul.listview > li h2 {
   font-size: 18px;
   font-weight: bold;
   margin: 8px 0 4px 0;
 }
-/* line 146, ../sass/ng-mobile.sass */
+/* line 194, ../sass/ng-mobile.sass */
 ul.listview > li p {
   margin: 4px 0 8px 0;
 }
-/* line 148, ../sass/ng-mobile.sass */
+/* line 196, ../sass/ng-mobile.sass */
 ul.listview > li > a {
   position: relative;
   display: block;
@@ -475,7 +250,7 @@ ul.listview > li > a {
   text-decoration: none;
   padding-right: 30px;
 }
-/* line 156, ../sass/ng-mobile.sass */
+/* line 204, ../sass/ng-mobile.sass */
 ul.listview > li > a:after {
   content: ">";
   position: absolute;
@@ -486,7 +261,7 @@ ul.listview > li > a:after {
   color: #222222;
 }
 
-/* line 165, ../sass/ng-mobile.sass */
+/* line 213, ../sass/ng-mobile.sass */
 ul.listview-splitbtn > li {
   overflow: hidden;
   position: relative;
@@ -497,17 +272,17 @@ ul.listview-splitbtn > li {
   border-top: 1px solid white;
   background-color: #fafafa;
 }
-/* line 174, ../sass/ng-mobile.sass */
+/* line 222, ../sass/ng-mobile.sass */
 ul.listview-splitbtn > li h2 {
   font-size: 18px;
   font-weight: bold;
   margin: 8px 0 4px 0;
 }
-/* line 178, ../sass/ng-mobile.sass */
+/* line 226, ../sass/ng-mobile.sass */
 ul.listview-splitbtn > li p {
   margin: 4px 0 8px 0;
 }
-/* line 180, ../sass/ng-mobile.sass */
+/* line 228, ../sass/ng-mobile.sass */
 ul.listview-splitbtn > li > a {
   position: relative;
   overflow: hidden;
@@ -518,11 +293,11 @@ ul.listview-splitbtn > li > a {
   text-decoration: none;
   padding-right: 30px;
 }
-/* line 189, ../sass/ng-mobile.sass */
+/* line 237, ../sass/ng-mobile.sass */
 ul.listview-splitbtn > li > a:nth-child(1n+1) {
   background: none;
 }
-/* line 191, ../sass/ng-mobile.sass */
+/* line 239, ../sass/ng-mobile.sass */
 ul.listview-splitbtn > li > a:nth-child(1n+2) {
   color: transparent;
   position: absolute;
@@ -536,7 +311,29 @@ ul.listview-splitbtn > li > a:nth-child(1n+2) {
   background: url("./img/plus-circle-frame.png") no-repeat scroll 50% 50%;
 }
 
-/* line 203, ../sass/ng-mobile.sass */
+/* line 251, ../sass/ng-mobile.sass */
+ul.listview > li,
+ul.listview-splitbtn > li {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+}
+/* line 254, ../sass/ng-mobile.sass */
+ul.listview > li:active, ul.listview > li:hover,
+ul.listview-splitbtn > li:active,
+ul.listview-splitbtn > li:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #cccccc 0%, #eeeeee 100%);
+  background-image: -moz-linear-gradient(top, #cccccc 0%, #eeeeee 100%);
+  background-image: -o-linear-gradient(top, #cccccc 0%, #eeeeee 100%);
+  background-image: -ms-linear-gradient(top, #cccccc 0%, #eeeeee 100%);
+  background-image: linear-gradient(top, #cccccc 0%, #eeeeee 100%);
+}
+
+/* line 257, ../sass/ng-mobile.sass */
 .inset {
   margin: 10px;
   padding: 5px;
@@ -547,7 +344,7 @@ ul.listview-splitbtn > li > a:nth-child(1n+2) {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 208, ../sass/ng-mobile.sass */
+/* line 262, ../sass/ng-mobile.sass */
 .inset > li {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -557,7 +354,7 @@ ul.listview-splitbtn > li > a:nth-child(1n+2) {
 }
 
 /* forms begin => */
-/* line 215, ../sass/ng-mobile.sass */
+/* line 267, ../sass/ng-mobile.sass */
 input, textarea, select, .uneditable-input {
   display: inline-block;
   width: 210px;
@@ -569,35 +366,9 @@ input, textarea, select, .uneditable-input {
   color: #555555;
   background-color: white;
   border: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 }
 
-/* line 230, ../sass/ng-mobile.sass */
-input, textarea {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
-}
-
-/* line 240, ../sass/ng-mobile.sass */
-input:focus, textarea:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-}
-
-/* line 250, ../sass/ng-mobile.sass */
+/* line 302, ../sass/ng-mobile.sass */
 form fieldset {
   border: 1px solid #888888;
   -webkit-border-radius: 5px;
@@ -609,56 +380,55 @@ form fieldset {
   margin: 5px;
   background-color: #eaeaea;
 }
-/* line 256, ../sass/ng-mobile.sass */
+/* line 308, ../sass/ng-mobile.sass */
 form legend {
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
   text-shadow: rgba(181, 181, 181, 0.6) 0px 1px 3px;
 }
-/* line 261, ../sass/ng-mobile.sass */
+/* line 313, ../sass/ng-mobile.sass */
 form .row {
   position: relative;
   clear: both;
   overflow: hidden;
   height: 40px;
 }
-/* line 266, ../sass/ng-mobile.sass */
+/* line 318, ../sass/ng-mobile.sass */
 form .row.align-left {
   text-align: left;
 }
-/* line 268, ../sass/ng-mobile.sass */
+/* line 320, ../sass/ng-mobile.sass */
 form .row.row-textarea {
   height: auto;
 }
-/* line 270, ../sass/ng-mobile.sass */
+/* line 322, ../sass/ng-mobile.sass */
 form .row.row-textarea > textarea {
   width: 100%;
   border: 0 none;
   margin: 5px 0 9px 0;
   padding: 10px 10px 10px 14px;
 }
-/* line 275, ../sass/ng-mobile.sass */
+/* line 327, ../sass/ng-mobile.sass */
 form .row > label {
   padding-top: 3px;
   display: block;
   font-weight: bold;
 }
-/* line 279, ../sass/ng-mobile.sass */
-form .row > label > input[type=radio],
-form .row > label > input[type=checkbox] {
+/* line 331, ../sass/ng-mobile.sass */
+form .row > label > input[type=radio], form .row > label > input[type=checkbox] {
   position: absolute;
   right: 10px;
   top: 0;
   width: auto;
 }
-/* line 285, ../sass/ng-mobile.sass */
+/* line 337, ../sass/ng-mobile.sass */
 form .row > input {
   position: absolute;
   right: 10px;
   top: 0;
 }
-/* line 289, ../sass/ng-mobile.sass */
+/* line 341, ../sass/ng-mobile.sass */
 form .row > label.bg {
   border: 1px solid #dedede;
   -webkit-border-radius: 5px;
@@ -669,79 +439,131 @@ form .row > label.bg {
   background-color: white;
   padding: 10px;
 }
-/* line 294, ../sass/ng-mobile.sass */
-form .row > label.bg > input[type=radio],
-form .row > label.bg > input[type=checkbox] {
+/* line 346, ../sass/ng-mobile.sass */
+form .row > label.bg > input[type=radio], form .row > label.bg > input[type=checkbox] {
   position: absolute;
   top: 10px;
 }
-/* line 298, ../sass/ng-mobile.sass */
+/* line 350, ../sass/ng-mobile.sass */
 form .row .help {
   width: 180px;
   font-size: 12px;
   color: #888888;
   margin: 0;
 }
-/* line 304, ../sass/ng-mobile.sass */
+/* line 356, ../sass/ng-mobile.sass */
 form .row.group > label {
   width: 90px;
   text-align: center;
   display: inline-block;
   font-weight: bold;
 }
-/* line 309, ../sass/ng-mobile.sass */
-form .row.group > label > input[type=radio],
-form .row.group > label > input[type=checkbox] {
+/* line 361, ../sass/ng-mobile.sass */
+form .row.group > label > input[type=radio], form .row.group > label > input[type=checkbox] {
   width: auto;
   margin: 0 50%;
   padding: 0;
   position: relative;
 }
-
-/* line 321, ../sass/ng-mobile.sass */
-a.btn, button, input[type=submit] {
-  -moz-box-shadow: inset 0px 1px 0px 0px white;
-  -webkit-box-shadow: inset 0px 1px 0px 0px white;
-  box-shadow: inset 0px 1px 0px 0px white;
-  background-color: transparent;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #dcdcdc;
-  display: inline-block;
-  color: black;
-  font-family: arial;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 1px 1px 0px white;
+/* line 367, ../sass/ng-mobile.sass */
+form .row.button-row {
+  text-align: right;
+  padding: 0 5px;
 }
-/* line 338, ../sass/ng-mobile.sass */
+
+/* line 371, ../sass/ng-mobile.sass */
+a.btn, button, input[type=submit] {
+  background: #e3e3e3;
+  border: 1px solid #bbbbbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #333333;
+  line-height: 1;
+  padding: 8px 0 9px;
+  text-align: center;
+  text-shadow: 0 1px 0 white;
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 25, ../sass/ng-mobile.sass */
+a.btn:hover, button:hover, input[type=submit]:hover {
+  background: #d9d9d9;
+  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+  -moz-box-shadow: inset 0 0 1px 1px #eaeaea;
+  box-shadow: inset 0 0 1px 1px #eaeaea;
+  color: #222222;
+  cursor: pointer;
+}
+/* line 30, ../sass/ng-mobile.sass */
 a.btn:active, button:active, input[type=submit]:active {
-  position: relative;
-  top: 1px;
+  background: #d0d0d0;
+  -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  -moz-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  box-shadow: inset 0 0 1px 1px #e3e3e3;
+  color: black;
 }
 
 /* <= forms end */
-/* line 345, ../sass/ng-mobile.sass */
+/* line 377, ../sass/ng-mobile.sass */
 header a.btn.back,
 #header a.btn.back {
+  background: #e3e3e3;
+  border: 1px solid #bbbbbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #333333;
+  line-height: 1;
+  padding: 8px 0 9px;
+  text-align: center;
+  text-shadow: 0 1px 0 white;
+  width: 150px;
+  display: inline-block;
   position: absolute;
   line-height: 100%;
   left: 10px;
   top: 10px;
   white-space: nowrap;
   width: auto;
-  /*width: 100% */
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 70px;
   padding: 6px 10px;
 }
+/* line 25, ../sass/ng-mobile.sass */
+header a.btn.back:hover,
+#header a.btn.back:hover {
+  background: #d9d9d9;
+  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+  -moz-box-shadow: inset 0 0 1px 1px #eaeaea;
+  box-shadow: inset 0 0 1px 1px #eaeaea;
+  color: #222222;
+  cursor: pointer;
+}
+/* line 30, ../sass/ng-mobile.sass */
+header a.btn.back:active,
+#header a.btn.back:active {
+  background: #d0d0d0;
+  -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  -moz-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  box-shadow: inset 0 0 1px 1px #e3e3e3;
+  color: black;
+}
 
 /* => dialogs start */
-/* line 361, ../sass/ng-mobile.sass */
+/* line 392, ../sass/ng-mobile.sass */
 div.dialog {
   position: absolute;
   top: 0;
@@ -751,7 +573,7 @@ div.dialog {
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 369, ../sass/ng-mobile.sass */
+/* line 400, ../sass/ng-mobile.sass */
 div.dialog .wrapper {
   background-color: #d8d8d8;
   text-align: center;
@@ -765,18 +587,18 @@ div.dialog .wrapper {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 377, ../sass/ng-mobile.sass */
+/* line 408, ../sass/ng-mobile.sass */
 div.dialog ul {
   list-style-type: none;
   left: 0;
   margin: 0;
   padding: 0;
 }
-/* line 382, ../sass/ng-mobile.sass */
+/* line 413, ../sass/ng-mobile.sass */
 div.dialog ul li {
   padding: 5px 0;
 }
-/* line 384, ../sass/ng-mobile.sass */
+/* line 415, ../sass/ng-mobile.sass */
 div.dialog ul li button {
   width: 90%;
   padding: 10px;
@@ -784,13 +606,53 @@ div.dialog ul li button {
 
 /* <= dialogs end */
 /* span-list is a comma seperated list of items */
-/* line 391, ../sass/ng-mobile.sass */
+/* line 422, ../sass/ng-mobile.sass */
 p.span-list {
   white-space: nowrap;
 }
-/* line 394, ../sass/ng-mobile.sass */
+/* line 425, ../sass/ng-mobile.sass */
 p.span-list > span:before {
   content: ", ";
   padding: 0;
   margin: 0;
+}
+
+/* show / hide sidebar navigation */
+@media screen  and (orientation:landscape) and (min-width: 600px) {
+  /* line 432, ../sass/ng-mobile.sass */
+  #footer, footer {
+    display: none !important;
+  }
+
+  /* line 434, ../sass/ng-mobile.sass */
+  nav, #nav {
+    position: absolute;
+    top: 45px;
+    width: 20%;
+    border-right: 1px solid #bfbfbf;
+    z-index: 2;
+  }
+
+  /* line 440, ../sass/ng-mobile.sass */
+  #wrapper {
+    left: 20%;
+    width: 80%;
+    bottom: 0px;
+  }
+
+  /* line 444, ../sass/ng-mobile.sass */
+  nav, #nav {
+    bottom: 0px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 600px) {
+  /* line 448, ../sass/ng-mobile.sass */
+  #footer, footer {
+    display: block;
+  }
+
+  /* line 450, ../sass/ng-mobile.sass */
+  nav, #nav {
+    display: none;
+  }
 }
