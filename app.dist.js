@@ -17,14 +17,14 @@ ngMobile.config(function($routeProvider, $locationProvider) {
  * Startpage Controller
  */
 function StartCntl($scope, $location) {
-    // Set partials for Header and Footer in MainCntl
+    // Set header text
     $scope.setHeaderText('Start');
 
     // the header and footer are set to this value in MainCntl already (see lib/ng-mobile.js)...
     // but this way, you can set them to another file
     /*
     $scope.setPartial('header', 'partials/default_header.html');
-    $scope.setPartial('footer', 'partials/default_footer.html');
+    $scope.setPartial('footer', 'partials/default_navigation.html');
     */
 }
 

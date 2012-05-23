@@ -9,6 +9,29 @@ $default-text-shadow-v-offset: 1px
 @import "icons.css"
 @import "compass/css3"
 
+/* minimal Button Style
+@mixin minimal
+  background: #e3e3e3
+  border: 1px solid #bbb
+  @include border-radius (3px)
+  @include box-shadow(inset 0 0 1px 1px #f6f6f6)
+  color: #333
+  line-height: 1
+  padding: 8px 0 9px
+  text-align: center
+  text-shadow: 0 1px 0 #fff
+  width: 150px
+  display: inline-block
+  &:hover
+    background: #d9d9d9
+    @include box-shadow(inset 0 0 1px 1px #eaeaea)
+    color: #222
+    cursor: pointer
+  &:active
+    background: #d0d0d0
+    @include box-shadow(inset 0 0 1px 1px #e3e3e3)
+    color: #000
+
 #loader
   position: absolute
   top: 0
@@ -27,8 +50,7 @@ a
 
 a:active, a:focus, a:hover, a:link, a, button, input[type=submit]
   outline: none
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
-
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 
 body, ul, li
   padding: 0
@@ -51,8 +73,7 @@ header, #header
   height: 45px
   line-height: 45px
   background-color: #d51875
-  /*@include background-image(linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e))
-  @include background-image(linear-gradient(top, #47636D, #84A7B4 5%, #238DB3))
+  @include background-image(linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%))
   padding: 0
   color: #eee
   text-align: center
@@ -68,7 +89,9 @@ header h1, #header h1
   line-height: 45px
   text-align: center
   padding: 0
-  margin: 0
+  margin: 0 auto
+  overflow: hidden
+  text-overflow: ellipsis
 
 footer, #footer
   position: absolute
@@ -78,31 +101,9 @@ footer, #footer
   width: 100%
   height: 48px
   background-color: #222
-  @include background-image(linear-gradient(top, #999999, #666666 2%, #222222))
+  @include background-image(linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%))
   padding: 0
   border-top: 1px solid #444
-
-#content .ng-scope > form
-  padding: 55px 0 0 0
-
-#wrapper
-  position: absolute
-  z-index: 1
-  top: 45px
-  bottom: 48px
-  left: 0
-  width: 100%
-  background: $default-view-bg-color
-  overflow: auto
-  label, input
-    z-index: 999
-
-#scroller
-  position: relative
-  z-index: 1
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-  width: 100%
-  padding: 0
 
 footer > ul, #footer > ul
   display: table
@@ -120,14 +121,61 @@ footer > ul, #footer > ul
       text-align: center
       padding: 0 1px
       color: #fff !important
+    > a.active
+      @include background-image(linear-gradient(top, #666666, #999999 2%, #222222))
 
-footer > ul > li > a.active, #footer > ul > li > a.active
-  @include background-image(linear-gradient(top, #666666, #999999 2%, #222222))
+nav, #nav
+  > ul
+    > li
+      @include background-image(linear-gradient(top, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%))
+      overflow: hidden
+      list-style-type: none
+      display: block
+      a
+        display: table
+        width: 100%
+        height: 100%
+        float: left
+        color: $default-text-color !important
+      a.active
+        @include background-image(linear-gradient(top, rgba(232,255,193,1) 0%,rgba(132,229,52,1) 100%))
+      *
+        vertical-align: middle
+        text-align: left
+      a > span
+        display: table-cell
+        padding: 0
+        width: 100%
+        height: 45px
+        min-height: 45px
+
+#content .ng-scope > form
+  padding: 55px 0 0 0
+
+#wrapper
+  position: absolute
+  z-index: 1
+  top: 45px
+  bottom: 48px
+  left: 0
+  width: 100%
+  background: $default-view-bg-color
+  overflow: auto
+  label, input
+    z-index: 999
+
+#wrapper
+  width: 100%
+
+#scroller
+  position: relative
+  z-index: 1
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  width: 100%
+  padding: 0
 
 .inner-wrap
   padding: 0 10px
-
-
 
 /* listview
 
@@ -200,6 +248,12 @@ ul.listview-splitbtn > li
       z-index: 2
       background: url('./img/plus-circle-frame.png') no-repeat scroll 50% 50%
 
+ul.listview > li,
+ul.listview-splitbtn > li
+  @include background-image(linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%))
+  &:active,&:hover
+    @include background-image(linear-gradient(top, rgba(204,204,204,1) 0%,rgba(238,238,238,1) 100%))
+
 .inset
   margin: 10px
   padding: 5px
@@ -207,8 +261,6 @@ ul.listview-splitbtn > li
   @include border-radius(5px)
   > li
     @include border-radius(5px)
-
-
 
 /* forms begin =>
 
@@ -223,28 +275,28 @@ input, textarea, select, .uneditable-input
   color: #555555
   background-color: #ffffff
   border: 1px solid #cccccc
-  -webkit-border-radius: 3px
-  -moz-border-radius: 3px
-  border-radius: 3px
+//  -webkit-border-radius: 3px
+//  -moz-border-radius: 3px
+//  border-radius: 3px
 
-input, textarea
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s
-  transition: border linear 0.2s, box-shadow linear 0.2s
+//input, textarea
+//  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+//  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+//  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+//  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s
+//  -moz-transition: border linear 0.2s, box-shadow linear 0.2s
+//  -ms-transition: border linear 0.2s, box-shadow linear 0.2s
+//  -o-transition: border linear 0.2s, box-shadow linear 0.2s
+//  transition: border linear 0.2s, box-shadow linear 0.2s
 
-input:focus, textarea:focus
-  border-color: rgba(82, 168, 236, 0.8)
-  outline: 0
-  outline: thin dotted \9
-  /* IE6-9
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
+//input:focus, textarea:focus
+//  border-color: rgba(82, 168, 236, 0.8)
+//  outline: 0
+//  outline: thin dotted \9
+//  /* IE6-9
+//  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
+//  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
+//  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
 
 form
   fieldset
@@ -317,43 +369,24 @@ form
       padding: 0 5px
 
 a.btn, button, input[type=submit]
-  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff
-  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff
-  box-shadow: inset 0px 1px 0px 0px #ffffff
-  background-color: transparent
-  -moz-border-radius: 6px
-  -webkit-border-radius: 6px
-  border-radius: 6px
-  border: 1px solid #dcdcdc
-  display: inline-block
-  color: #000
-  font-family: arial
-  font-size: 14px
-  font-weight: bold
-  padding: 6px 24px
-  text-decoration: none
-  text-shadow: 1px 1px 0px #ffffff
-  &:active
-    position: relative
-    top: 1px
+  @include minimal
+  margin-bottom: 10px
 
 /* <= forms end
 
-
 header a.btn.back,
 #header a.btn.back
+  @include minimal
   position: absolute
   line-height: 100%
   left: 10px
   top: 10px
   white-space: nowrap
   width: auto
-  /*width: 100%
   overflow: hidden
   text-overflow: ellipsis
   max-width: 70px
   padding: 6px 10px
-
 
 /* => dialogs start
 div.dialog
@@ -394,9 +427,25 @@ p.span-list
       padding: 0
       margin: 0
 
-header h1,
-#header h1
-  text-align: center
-  margin: 0 auto
-  overflow: hidden
-  text-overflow: ellipsis      
+/* show / hide sidebar navigation
+@media screen  and (orientation:landscape) and (min-width: 600px)
+  #footer, footer
+    display: none!important
+  nav, #nav
+    position: absolute
+    top: 45px
+    width: 20%
+    border-right: 1px solid #BFBFBF
+    z-index: 2
+  #wrapper
+    left: 20%
+    width: 80%
+    bottom: 0px
+  nav, #nav
+    bottom: 0px
+
+@media screen and (orientation: portrait) and (max-width: 600px)
+  #footer, footer
+    display: block
+  nav, #nav
+    display: none

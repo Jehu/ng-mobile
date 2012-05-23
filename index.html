@@ -46,7 +46,7 @@
         <!-- the mousewheel plugin is optional for jScrollPane if your all should be used in desktop browsers -->
         <script src="./lib/jscrollpane/jquery.mousewheel.js"></script>
         <script src="./lib/jscrollpane/jquery.jscrollpane.min.js"></script>
-        
+
         <script src="./lib/ng-mobile.js"></script>
 
         <script src="app.dist.js"></script>
@@ -59,7 +59,8 @@
     <body ng-app="ngMobile" ng-controller="MainCntl" ng-cloak>
         <header ng-include="header"></header>
         <div ng-view id="content"></div>
-        <footer ng-include="footer"></footer>
+        <nav ng-include="navigation"></nav>
+        <footer ng-include="navigation"></footer>
         <div id="loader" ngm-remove-preloader></div>
     </body>
 </html>
