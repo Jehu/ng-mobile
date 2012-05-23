@@ -38,7 +38,26 @@
 
 <section>
 <h2>Header</h2>
-<p></p>
+<p>Often the header holds the page name only. This is easy. Just set an title in the controllers:</p>
+<pre><code>
+$scope.setHeaderText('My header text');
+</pre></code>
+
+<p>You can override the default header inside of yout partials by placing an div#header with some content. Then you can add some other markup, e.g. some buttons:</p>
+<pre><code>
+&lt;div id=&quot;header&quot;&gt;
+    &lt;h1&gt;{ {txtHeader} }&lt;/h1&gt;
+&lt;/div&gt;
+</pre></code>
+
+<h3>Back-Button</h3>
+<p>You can place a back-button in your header partial or inside your custom header container. The Button text will be automatically the title of the previous seen page. The button will be hidden, if no previous page exists:</p>
+<pre><code>
+&lt;div id=&quot;header&quot;&gt;
+    &lt;a href=&quot;&#123; &#123;previousPage.hash&#125; &#125;&quot; ng-show=&quot;previousPage.txtHeader&quot; class=&quot;btn back&quot;&gt;&#123;&#123;previousPage.txtHeader&#125;&#125;&lt;/a&gt;
+    &lt;h1&gt;&#123; &#123;txtHeader&#125; &#125;&lt;/h1&gt;
+&lt;/div&gt;
+</pre></code>
 </secton>
 
 <section>
@@ -109,12 +128,14 @@ $scope.setPartial('navigation', 'partials/other_navigation.html');
         <ul>
             <li><a href="#start" class="icon home"><span>Start</span></a></li>
             <li><a href="#basics" class="icon pencil"><span>Basics</span></a></li>
+            <li><a href="#markup" class="icon stack"><span>Markup</span></a></li>
         </ul>
     </div>
     <div id="nav">
         <ul>
             <li><a href="#start" class="icon home"><span>Start</span></a></li>
             <li><a href="#basics" class="icon pencil"><span>Basics</span></a></li>
+            <li><a href="#markup" class="icon stack"><span>Markup</span></a></li>
         </ul>
     </div>
 </div>
