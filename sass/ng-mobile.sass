@@ -428,10 +428,14 @@ p.span-list
       margin: 0
 
 /* show / hide sidebar navigation
+nav, #nav
+  display: none
+
 @media screen  and (orientation:landscape) and (min-width: 600px)
   #footer, footer
     display: none!important
   nav, #nav
+    display: block
     position: absolute
     top: 45px
     width: 20%
