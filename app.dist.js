@@ -84,6 +84,4 @@ function MarkupCntl($scope) {
     var s = $scope;
     $scope.setHeaderText('Markup');
     $scope.naviInc = 'partials/default_navigation.html';
-    $scope.setPartial('footer', 'partials/start.html');
-    $scope.setPartial('navigation', 'partials/start.html');
 }
