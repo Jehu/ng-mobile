@@ -1,7 +1,0 @@
-config.xml*
-*.zip
-.sass-cache/
-/lib/iscroll/*
-/lib/iscroll4/*
-/gh-pages
-/app.js
