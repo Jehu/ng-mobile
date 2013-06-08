@@ -1,6 +1,6 @@
 {
   "name": "ng-mobile",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": [
     "ng-mobile.js",
     "ng-mobile.css"
@@ -13,10 +13,10 @@
     "README.md"
   ],
   "dependencies": {
-    "angular": "git://github.com/PatternConsulting/bower-angular#1.1.5",
-    "angular-resource": "git://github.com/PatternConsulting/bower-angular#1.1.5",
-    "angular-cookies": "git://github.com/PatternConsulting/bower-angular#1.1.5",
-    "angular-sanitize": "git://github.com/PatternConsulting/bower-angular#1.1.5",
-    "angular-mobile-nav": "git://github.com/ajoslin/angular-mobile-nav"
+    "angular": "PatternConsulting/bower-angular#1.1.5",
+    "angular-resource": "PatternConsulting/bower-angular#1.1.5",
+    "angular-cookies": "PatternConsulting/bower-angular#1.1.5",
+    "angular-sanitize": "PatternConsulting/bower-angular#1.1.5",
+    "angular-mobile-nav": "ajoslin/angular-mobile-nav"
   }
 }
