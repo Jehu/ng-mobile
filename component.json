@@ -1,0 +1,18 @@
+{
+  "name": "ng-mobile",
+  "version": "0.3.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jehu/ng-mobile.git"
+  }
+  "dependencies": {
+    "angular": "PatternConsulting/bower-angular#1.1.5",
+    "angular-resource": "PatternConsulting/bower-angular#1.1.5",
+    "angular-cookies": "PatternConsulting/bower-angular#1.1.5",
+    "angular-sanitize": "PatternConsulting/bower-angular#1.1.5"
+  },
+  "devDependencies": {
+    "angular-mocks": "PatternConsulting/bower-angular#1.1.5",
+    "angular-scenario": "PatternConsulting/bower-angular#1.1.5"
+  }
+}
