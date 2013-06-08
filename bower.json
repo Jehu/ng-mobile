@@ -1,9 +1,9 @@
 {
   "name": "ng-mobile",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "main": [
-    "ng-mobile.js",
-    "ng-mobile.css"
+    "./ng-mobile.js",
+    "./ng-mobile.css"
   ],
   "license": "MIT",
   "ignore": [
