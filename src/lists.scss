@@ -1,0 +1,53 @@
+@import "base";
+
+$list-item-gradient-start:  rgba(245,245,245,1);
+$list-item-gradient-middle: rgba(236,236,236,1);
+$list-item-gradient-end:    rgba(243,243,243,1);
+
+@mixin list-item-background {
+	@include background-image(linear-gradient(top, $list-item-gradient-start, $list-item-gradient-middle 3%, $list-item-gradient-end));
+}
+
+#wrapper {
+	position:relative;
+	z-index: 1;
+	top: $header-height;
+	bottom: $footer-height;
+	left: 0;
+	width: 100%;
+	background-color: $default-view-bg-color;
+	overflow: auto;
+}
+
+#scroller {
+	position:relative;
+	z-index:1;
+	width:100%;
+	padding:0;
+	> ul {
+		list-style:none;
+		padding:0;
+		margin:0;
+		width:100%;
+		text-align:left;
+		> li {
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+#scroller {
+	ul {
+		> li {
+			padding:3px 10px;
+			min-height:40px;
+			border-bottom:1px solid #ccc;
+			border-top:1px solid #fff;
+			background-color: #fafafa;
+			font-size:14px;
+		  	position: relative;
+			@include list-item-background;
+		}
+	}
+}

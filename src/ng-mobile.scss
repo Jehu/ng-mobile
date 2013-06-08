@@ -1,0 +1,154 @@
+@import "_base";
+@import "lists";
+
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+body {
+	font-size: $default-font-size;
+	-webkit-user-select: none;
+	-webkit-text-size-adjust: none;
+	font-family: helvetica;
+}
+
+body, ul, li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+	color: $default-link-color;
+	cursor: pointer;
+	&:link, &:hover, &:active {
+		text-decoration: none;
+		color: $default-link-color;
+	}
+}
+
+a:active, a:focus, a:hover, a:link, a, button, input[type=submit] {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+header {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $header-height;
+	line-height: $header-height;
+	background-color: $default-header-bg-color;
+	padding: 0;
+	color: $default-text-color;
+	text-align: center;
+	@include background-image(linear-gradient(top, rgba(245,245,245,1), rgba(220,220,220,1) 97%, rgba(243,243,243,1)));
+	> a {
+		color: $default-link-color;
+		text-decoration: none;
+		font-weight: bold;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	}
+	> h1 {
+		font-size: 18px;
+		line-height: $header-height;
+		text-align: center;
+		padding: 0;
+		margin: 0 auto;
+		width: 55%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		> em {
+			font-style: normal;
+			color: $col-highlight;
+		}
+	}
+	&.padding-section-index {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding-right: 18px;
+	}
+}
+
+footer {
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: $footer-height;
+	background-color: $default-view-bg-color;
+	@include background-image(linear-gradient(top, rgba(125, 126, 125, 1) 0%, rgba(14, 14, 14, 1) 100%));
+	padding: 0;
+	border-top: 1px solid #444444;
+	text-align: center;
+	a {
+		margin: 6px 10px 0 10px;
+		display: inline-block;
+	}
+}
+
+footer > ul {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	> li {
+		display: table-cell;
+		overflow: hidden;
+		line-height: 100%;
+		> a {
+			display: block;
+			width: auto;
+			height: 14px;
+			margin: 0;
+			text-align: center;
+			padding: 17px 1px;
+			color: $default-link-color !important;
+		}
+		> a.active {
+			@include background-image(linear-gradient(top, #666666, #999999 2%, #222222));
+		}
+	}
+}
+
+nav {
+	> ul {
+		> li {
+			@include background-image(linear-gradient(top, rgba(254, 252, 234, 1) 0%, rgba(241, 218, 54, 1) 100%));
+			overflow: hidden;
+			list-style-type: none;
+			display: block;
+			a {
+				display: table;
+				width: 100%;
+				height: 100%;
+				float: left;
+				color: $default-text-color !important;
+			}
+			a.active {
+				@include background-image(linear-gradient(top, rgba(232, 255, 193, 1) 0%, rgba(132, 229, 52, 1) 100%));
+			}
+			* {
+				vertical-align: middle;
+				text-align: left;
+			}
+			a > span {
+				display: table-cell;
+				padding: 0;
+				width: 100%;
+				height: 45px;
+				min-height: 45px;
+			}
+		}
+	}
+}
