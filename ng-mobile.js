@@ -28,10 +28,11 @@ angular.module('ngMobile', ['ajoslin.mobile-navigate'])
 	});
 
 	$rootScope.$on('$routeChangeSuccess', function() {
-		$timeout(function() {
-			window.FastClick.attach(document.body);
-			return;
-		},0);
+		// FIXME add fastclick as a dependency?
+		//$timeout(function() {
+		//	window.FastClick.attach(document.body);
+		//	return;
+		//},0);
 
 		$timeout(function() { // wait for DOM, then restore scroll position
 			$window.scrollTo(0, ($rootScope.scrollPos[escape($location.path())] !== undefined) ? $rootScope.scrollPos[escape($location.path())] : 0);
