@@ -2,15 +2,13 @@
 
 **Note:** ``ng-mobile`` is completely new with Version 0.3.3.
 
-This is a starting point for my mobile websites or mobile applications (e.g. with phonegap/cordova).
-`ng-mobile` is a AngularJS module that makes some ground work for you.
+This is a starting point for my mobile websites or mobile applications (e.g. with phonegap/cordova). [Read what's the motivation](wiki/motivation).
+`ng-mobile` is a AngularJS module that makes some ground work for you. 
 
 It is based on
 
   * [AngularJS](http://www.angularjs.org)
   * [angular-mobile-nav](https://github.com/ajoslin/angular-mobile-nav)
-  * [SASS](http://sass-lang.com/)
-  * [Compass](http://compass-style.org/)
 
 All honor and thanks goes to the skilled people working on that great mentioned open source projects.
 
@@ -18,10 +16,10 @@ All honor and thanks goes to the skilled people working on that great mentioned 
 
   * Module for AngularJS with all it's great features
   * prefetch and cache template files from routes
-  * save and restore scroll position per URL
-  * comes with an basic mobile theme as a staring point
-  * installs the new Angular version to use $animation and other great enhancements
+  * save and restore scroll position per route
+  * installs Angular 1.1.5 to use $animation and other great enhancements
   * installs `angular-mobile-nav`
+  * let you use the [design and styling you want to](wiki/Themes-you-could-use-for-your-next-mobile-application)
 
 ## Requirements
 
@@ -37,23 +35,24 @@ All dependencies will be resolved automatically (AngularJS 1.1.5, angular-mobile
 ## Usage
 
 ### Include needed components to your index.html
-``FIXME add html code here``
-### Declare ``ng-mobile`` as a dependency to your application.
-``FIXME show the code``
-## Use the ng-mobile base theme (optional)
-``ng-mobile`` comes with an *optional* SASS based theme, you can use as a staring point for your own customized theme.
 
-If you want to use the base theme, read further...
+	<script src="components/angular/angular.min.js"></script>
+	<!-- optional START -->
+	<script src="components/angular/angular-resource.min.js"></script>
+	<script src="components/angular/angular-sanitize.min.js"></script>
+	<script src="components/angular/angular-cookies.min.js"></script>
+	<!-- optional END -->
+	<script src="components/angular-mobile-nav/mobile-nav.js"></script>
+	<script src="components/ng-mobile/ng-mobile.js"></script>
+	<!-- Your application -->
+	<script src="myApp.js"></script>
 
-### Add ng-mobile CSS
-``FIXME add code here``
-#### Write your views
-If you want to use the ``ng-mobile`` theme as a base for your application, you should write your views on the proposed way. You can find some examples here. ``FIXME write Wiki page and link it here``
+
+### Declare `ng-mobile` as a dependency to your application.
+
+    angular.module("myApp",["ngMobile"]);
 
 ## TODO
-
-* write wiki pages with example code
-* Create a demo application
-* create/enhance CSS styling for html forms
-* ask someone to make a real good base theme (or some parts of it)
+* write wiki pages 
+* Create a demo application (use `fries` theme)
 * add helpfull directives for mobile purposes
