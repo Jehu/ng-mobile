@@ -8,6 +8,7 @@
 
 * {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	@include user-select(none);
 }
 
 body {
