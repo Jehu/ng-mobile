@@ -2,7 +2,7 @@
 
 **Note:** ``ng-mobile`` is completely new with Version 0.3.3.
 
-This is a starting point for my mobile websites or mobile applications (e.g. with phonegap/cordova). [Read what's the motivation](../wiki/motivation).
+This is a starting point for my mobile websites or mobile applications (e.g. with phonegap/cordova). [Read what's the motivation](https://github.com/Jehu/ng-mobile/wiki/motivation).
 `ng-mobile` is a AngularJS module that makes some ground work for you. 
 
 It is based on
@@ -19,7 +19,7 @@ All honor and thanks goes to the skilled people working on that great mentioned 
   * save and restore scroll position per route
   * installs Angular 1.1.5 to use $animation and other great enhancements
   * installs `angular-mobile-nav`
-  * let you use the [design and styling you want to](wiki/Themes-you-could-use-for-your-next-mobile-application)
+  * let you use the [design and styling you want to](https://github.com/Jehu/ng-mobile/wiki/Themes-you-could-use-for-your-next-mobile-application)
 
 ## Requirements
 
