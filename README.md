@@ -2,7 +2,7 @@
 
 **Note:** ``ng-mobile`` is completely new with Version 0.3.3.
 
-This is a starting point for my mobile websites or mobile applications (e.g. with phonegap/cordova). [Read what's the motivation](wiki/motivation).
+This is a starting point for my mobile websites or mobile applications (e.g. with phonegap/cordova). [Read what's the motivation](../wiki/motivation).
 `ng-mobile` is a AngularJS module that makes some ground work for you. 
 
 It is based on
