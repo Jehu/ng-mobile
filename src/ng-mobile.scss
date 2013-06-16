@@ -1,6 +1,6 @@
 @import "_base";
 @import "lists";
-
+@import "compass/css3/user-interface";
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
 	display: none !important;
@@ -8,12 +8,12 @@
 
 * {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	@include box-sizing(border-box);
 	@include user-select(none);
 }
 
 body {
 	font-size: $default-font-size;
-	-webkit-user-select: none;
 	-webkit-text-size-adjust: none;
 	font-family: helvetica;
 }
