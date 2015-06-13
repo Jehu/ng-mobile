@@ -1,3 +1,5 @@
+**NOTE:** ng-mobile is no longer maintained. I now use [meteor](http://meteor.com) for my app development instead of AngularJS now.
+
 # ng-mobile
 
 **Note:** ``ng-mobile`` is completely new with Version 0.3.3.
